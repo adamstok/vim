@@ -53,6 +53,7 @@ let g:newtrw_liststyle=3
 
 
 " ----------------- BASIC CHEATSHEET -------------
+" Vundle Plugin manager: https://github.com/VundleVim/Vundle.vim
 "F4 (= add ctags)"
 "ctrl+] (= go to tag), ctrl+w+] (= open tag in horizontal split)
 ":ls (= list buffers)"
