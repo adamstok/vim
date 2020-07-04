@@ -68,6 +68,6 @@ let g:newtrw_liststyle=3
 "control+w+(+/-) (resize when splitted horizontally)
 "ctrl+pg up (switching btw tabs in the terminal)
 ":PluginInstall (vundle install plugins)
-"
+"shit+print screen (= ubuntu, select an area an do a print screen of it)
 
 
