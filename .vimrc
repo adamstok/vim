@@ -27,7 +27,6 @@ call vundle#end()            " required
 " ----------------- BASIC CONFIG ------------------
 set background=dark
 autocmd vimenter * colorscheme gruvbox
-set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
 set autoindent
 set wildmenu
 set confirm
@@ -67,7 +66,7 @@ let g:newtrw_liststyle=3
 "control+w+< or > (resize when splitted vertically)
 "control+w+(+/-) (resize when splitted horizontally)
 "ctrl+pg up (switching btw tabs in the terminal)
-":PluginInstall (vundle install plugigs)
+":PluginInstall (vundle install plugins)
 "
 
 
