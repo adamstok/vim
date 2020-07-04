@@ -46,7 +46,6 @@ set spelllang +=en
 syntax enable
 filetype plugin on
 filetype plugin indent on    " required
-command! MakeTags !ctags -R .
 
 let g:newtrw_banner=0
 let g:newtrw_browse_split=4
