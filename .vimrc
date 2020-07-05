@@ -1,6 +1,14 @@
 set nocompatible              " be iMproved, required
 set path+=**
 filetype off                  " required
+syntax on
+set noerrorbells
+set smartindent
+set nu
+set nowrap
+set smartcase
+set incsearch
+set tabstop=4 softtabstop=4
 
 " ----------------- VUNDLE PLUGIN MANAGER ----------
 
@@ -16,10 +24,10 @@ Plugin 'frazrepo/vim-rainbow'
 Plugin 'mileszs/ack.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'w0rp/ale'
-Plugin 'terryma/vim-multiple-cursors'
 Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'basilgor/vim-autotags'
+Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 call vundle#end()            " required
 
 " ----------------- VUNDLE END --------------------
@@ -27,7 +35,7 @@ call vundle#end()            " required
 " ----------------- BASIC CONFIG ------------------
 set background=dark
 autocmd vimenter * colorscheme gruvbox
-set autoindent
+"set autoindent
 set wildmenu
 set confirm
 set hlsearch
