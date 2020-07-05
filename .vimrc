@@ -9,6 +9,7 @@ set nowrap
 set smartcase
 set incsearch
 set tabstop=4 softtabstop=4
+let mapleader = " "
 
 " ----------------- VUNDLE PLUGIN MANAGER ----------
 
@@ -28,6 +29,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'basilgor/vim-autotags'
 Plugin 'git@github.com:Valloric/YouCompleteMe.git'
+Plugin 'mbbill/undotree'
 call vundle#end()            " required
 
 " ----------------- VUNDLE END --------------------
@@ -58,6 +60,21 @@ let g:newtrw_banner=0
 let g:newtrw_browse_split=4
 let g:newtrw_altv=1
 let g:newtrw_liststyle=3
+let g:newtrw_winsize = 25
+
+
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR> 
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <silent> <leader>+ :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
+nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
+
+
 
 
 " ----------------- BASIC CHEATSHEET -------------
@@ -112,3 +129,9 @@ let g:newtrw_liststyle=3
 "insert mode ) !!
 "ci' (= delete all in the nearest '' and enter in insert mode)
 "terminal ubuntu ctrl+shit+t (= open new tab in terminal)
+"leader = space ,so ....
+"space + h/j/k/l (= go to next window, when splitted)
+"space+h or space+l (= when splitted windows, go to the left/right window)
+"space+pv (= open a tree window)
+"space+u  (= go to undotree on the left)
+"
