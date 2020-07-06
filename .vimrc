@@ -1,15 +1,3 @@
-set nocompatible              " be iMproved, required
-set path+=**
-filetype off                  " required
-syntax on
-set noerrorbells
-set smartindent
-set nowrap
-set smartcase
-set incsearch
-set tabstop=4 softtabstop=4
-let mapleader = " "
-
 " ----------------- VUNDLE PLUGIN MANAGER ----------
 
 " set the runtime path to include Vundle and initialize
@@ -27,16 +15,26 @@ Plugin 'w0rp/ale'
 Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'basilgor/vim-autotags'
-Plugin 'git@github.com:Valloric/YouCompleteMe.git'
 Plugin 'mbbill/undotree'
 call vundle#end()            " required
 
 " ----------------- VUNDLE END --------------------
 
 " ----------------- BASIC CONFIG ------------------
+set nocompatible              " be iMproved, required
+set path+=**
+filetype off                  " required
+syntax on
+set noerrorbells
+set smartindent
+set nowrap
+set smartcase
+set incsearch
+let mapleader = " "
+
 set background=dark
 autocmd vimenter * colorscheme gruvbox
-"set autoindent
+set autoindent
 set wildmenu
 set confirm
 set hlsearch
@@ -66,12 +64,12 @@ let g:newtrw_winsize = 25
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR> 
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>q :wincmd q<CR>
 nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
-nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 
 
