@@ -132,4 +132,6 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 "space+h or space+l (= when splitted windows, go to the left/right window)
 "space+pv (= open a tree window)
 "space+u  (= go to undotree on the left)
-"
+"in tmux, ctrl+b+c (= create new tab)
+"in tmux, ctrl+b+number (= select the tab)
+"in tmux the tabs are enumerated below,... i think so :P
