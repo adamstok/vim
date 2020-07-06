@@ -4,7 +4,6 @@ filetype off                  " required
 syntax on
 set noerrorbells
 set smartindent
-set nu
 set nowrap
 set smartcase
 set incsearch
@@ -47,7 +46,8 @@ set linebreak
 syntax enable
 set laststatus=2
 set ruler
-set number
+set number relativenumber
+set nu rnu
 set mouse=a
 set spell
 set spelllang +=fr
