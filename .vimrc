@@ -50,6 +50,10 @@ set mouse=a
 set spell
 set spelllang +=fr
 set spelllang +=en
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
+xnoremap p pgvy
 syntax enable
 filetype plugin on
 filetype plugin indent on    " required
@@ -135,3 +139,7 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 "in tmux, ctrl+b+c (= create new tab)
 "in tmux, ctrl+b+number (= select the tab)
 "in tmux the tabs are enumerated below,... i think so :P
+"in visual block select the lines, press : , type norm I + space (= it will
+"add a space on selected lines)
+"after yank, in normal mode press p, and it will paste how many times you want
+"!
