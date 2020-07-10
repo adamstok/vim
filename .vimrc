@@ -143,3 +143,11 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 "add a space on selected lines)
 "after yank, in normal mode press p, and it will paste how many times you want
 "!
+"
+" tmux copy - paste :
+" Enter ‘copy mode’ by pressing CTRL+b, [.
+" Use the arrow keys to go to the position from where you want to start
+" copying. Press CTRL+SPACE to start copying.
+" Use arrow keys to go to the end of text you want to copy. Press ALT+w or
+" CTRL+w to copy into Tmux buffer.
+" Press CTRL+b, ] to paste in a possibly different Tmux pane/window.
