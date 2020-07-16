@@ -151,3 +151,4 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 " Use arrow keys to go to the end of text you want to copy. Press ALT+w or
 " CTRL+w to copy into Tmux buffer.
 " Press CTRL+b, ] to paste in a possibly different Tmux pane/window.
+" :noh (= no highlight after search)
