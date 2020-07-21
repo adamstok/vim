@@ -152,3 +152,4 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 " CTRL+w to copy into Tmux buffer.
 " Press CTRL+b, ] to paste in a possibly different Tmux pane/window.
 " :noh (= no highlight after search)
+" after search => n = next find, N = previous find
