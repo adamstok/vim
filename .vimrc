@@ -16,11 +16,136 @@ Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'basilgor/vim-autotags'
 Plugin 'mbbill/undotree'
+Plugin 'vobornik/vim-mql4'
+Plugin 'Valloric/YouCompleteMe'
+
+
+
+
+"Plugin 'scrooloose/nerdtree'
+"Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'tpope/vim-commentary'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-scripts/grep.vim'
+"Plugin 'vim-scripts/CSApprox'
+Plugin 'Raimondi/delimitMate'
+Plugin 'majutsushi/tagbar'
+Plugin 'Yggdroot/indentLine'
+"Plugin 'avelino/vim-bootstrap-updater'
+Plugin 'sheerun/vim-polyglot'
+"Plugin 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+
+"if isdirectory('/usr/local/opt/fzf')
+""  Plugin '/usr/local/opt/fzf' | Plugin 'junegunn/fzf.vim'
+"else
+""  Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+""  Plugin 'junegunn/fzf.vim'
+"endif
+"let g:make = 'gmake'
+"if exists('make')
+""        let g:make = 'make'
+"endif
+"Plugin 'Shougo/vimproc.vim', {'do': g:make}
+
+"" Vim-Session
+"Plugin 'xolox/vim-misc'
+"Plugin 'xolox/vim-session'
+
+"" Snippets
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
+
+"" Color
+"Plugin 'tomasr/molokai'
+
+"*****************************************************************************
+"" Custom bundles
+"*****************************************************************************
+
+" html
+"" HTML Bundle
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'tpope/vim-haml'
+Plugin 'mattn/emmet-vim'
+
+
+" javascript
+"" Javascript Bundle
+Plugin 'jelera/vim-javascript-syntax'
+
+
+" python
+"" Python Bundle
+Plugin 'davidhalter/jedi-vim'
+Plugin 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+
+
+
+
+
+
+
 call vundle#end()            " required
 
 " ----------------- VUNDLE END --------------------
 
 " ----------------- BASIC CONFIG ------------------
+set backspace=indent,eol,start
+let g:session_autosave = 'no'
+let g:session_autoload = 'no'
+
+" grep.vim
+nnoremap <silent> <leader>f :Rgrep<CR>
+let Grep_Default_Options = '-IR'
+let Grep_Skip_Files = '*.log *.db'
+let Grep_Skip_Dirs = '.git node_modules'
+
+" terminal emulation
+nnoremap <silent> <leader>sh :terminal<CR>
+
+"" Copy/Paste/Cut
+if has('unnamedplus')
+  set clipboard=unnamed,unnamedplus
+endif
+
+noremap YY "+y<CR>
+noremap <leader>p "+gP<CR>
+noremap XX "+x<CR>
+
+" html
+" for html files, 2 spaces
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+
+" javascript
+let g:javascript_enable_domhtmlcss = 1
+
+" vim-javascript
+augroup vimrc-javascript
+  autocmd!
+  autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
+augroup END
+
+" python
+" vim-python
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
+      \ formatoptions+=croq softtabstop=4
+      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END
+
+" Syntax highlight
+" Default highlight is better than polyglot
+let g:polyglot_disabled = ['python']
+let python_highlight_all = 1
+
+
+
+
+
 set nocompatible              " be iMproved, required
 set path+=**
 filetype off                  " required
@@ -153,3 +278,8 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 " Press CTRL+b, ] to paste in a possibly different Tmux pane/window.
 " :noh (= no highlight after search)
 " after search => n = next find, N = previous find
+"tmux ctrl+b+w (= show previous windows)
+"i (in tree so in pv shows the mod date, size etc of the files/folder)
+"tmux ctrl+b+x (= kill the tab)
+"tmux ctrl+b+: and kill-session (= kill session ! :D)
+"tmux ctrl+b+q (= show and choose window number)
