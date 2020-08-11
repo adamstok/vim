@@ -35,7 +35,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Yggdroot/indentLine'
 "Plugin 'avelino/vim-bootstrap-updater'
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plugin 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 
 "if isdirectory('/usr/local/opt/fzf')
 ""  Plugin '/usr/local/opt/fzf' | Plugin 'junegunn/fzf.vim'
@@ -283,3 +283,4 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 "tmux ctrl+b+x (= kill the tab)
 "tmux ctrl+b+: and kill-session (= kill session ! :D)
 "tmux ctrl+b+q (= show and choose window number)
+"tmux ctrl+b+c (= create new window)
