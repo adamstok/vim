@@ -113,6 +113,7 @@ endif
 
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
+"noremap <leader>y "*y<CR>
 noremap XX "+x<CR>
 
 " html
@@ -284,3 +285,4 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 "tmux ctrl+b+: and kill-session (= kill session ! :D)
 "tmux ctrl+b+q (= show and choose window number)
 "tmux ctrl+b+c (= create new window)
+"in vim gc (=  comment lines)
