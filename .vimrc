@@ -21,6 +21,9 @@ Plugin 'Valloric/YouCompleteMe'
 
 
 
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 
 "Plugin 'scrooloose/nerdtree'
 "Plugin 'jistr/vim-nerdtree-tabs'
@@ -93,6 +96,9 @@ call vundle#end()            " required
 " ----------------- VUNDLE END --------------------
 
 " ----------------- BASIC CONFIG ------------------
+
+let g:vim_markdown_folding_disabled = 1
+
 set backspace=indent,eol,start
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
@@ -286,3 +292,4 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 "tmux ctrl+b+q (= show and choose window number)
 "tmux ctrl+b+c (= create new window)
 "in vim gc (=  comment lines)
+"in terminal ctrl+shift+t (= open new tab)
