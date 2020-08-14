@@ -23,6 +23,8 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'}
+Plugin 'junegunn/goyo.vim'
 
 
 "Plugin 'scrooloose/nerdtree'
@@ -96,6 +98,8 @@ call vundle#end()            " required
 " ----------------- VUNDLE END --------------------
 
 " ----------------- BASIC CONFIG ------------------
+"Limelight
+"noremap <leader>li :Limelight<CR>
 
 let g:vim_markdown_folding_disabled = 1
 
@@ -293,3 +297,4 @@ nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 "tmux ctrl+b+c (= create new window)
 "in vim gc (=  comment lines)
 "in terminal ctrl+shift+t (= open new tab)
+"in terminal ls -laR (=show files even in subfolders)
