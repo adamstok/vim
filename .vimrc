@@ -596,5 +596,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "in terminal ls -laR (=show files even in subfolders)
 ":MarkdownPreview
 ":MarkdownPreviewStop
-":LimeLight
+":LimeLight (= make it gray)
 ":LimeLight!
+"leader + sp (= SpellCheck)
+"leader + sv (= source vimrc)
+"leader + ev (= edit vimrc)
+"f5 (= toggle SpellCheck)
+
