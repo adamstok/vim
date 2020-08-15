@@ -20,17 +20,11 @@ Plug 'rakr/vim-one'
 " Better manage Vim sessions.
 Plug 'tpope/vim-obsession'
 
-" Zoom in and out of a specific split pane (similar to tmux).
-Plug 'dhruvasagar/vim-zoom'
-
 " Pass focus events from tmux to Vim (useful for autoread and linting tools).
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Helpers for moving and manipulating files / directories.
 Plug 'tpope/vim-eunuch'
-
-" Launch Ranger from Vim.
-Plug 'francoiscabrol/ranger.vim'
 
 " Run a diff on 2 directories.
 Plug 'will133/vim-dirdiff'
@@ -505,9 +499,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 
-
-
-
+" Format paragraph (selected or not) to 80 character lines.
+nnoremap <Leader>g gqap
+xnoremap <Leader>g gqa
 
 
 
@@ -602,4 +596,20 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 "leader + sv (= source vimrc)
 "leader + ev (= edit vimrc)
 "f5 (= toggle SpellCheck)
-
+":DirDiff dir1 dir2 (= diff btw dirs)
+":Delete (= Delete a buffer and the file on the disk )
+":Move: Rename a buffer and the file on disk simultaneously.
+":Rename: Like :Move, but relative to the current file's containing directory.
+":Linediff (= in visual mode select one block, then :Linediff , select second
+"block - then Linediff -> it will show the diff btw selected blocks )
+" * on selected word will serch the word in the text :w
+" after searching the word with * , leader r to replace the word, or leader rc
+" to select each word and decide to replace it or not
+" after serch , go to next value with n or * 
+" :Grepper (= search for a word in files and show/modify it)
+" [space / ]space (= add new line before / after cursor line)
+"[e / ]e (= exchange current line with one above or below)
+":G + git command on a git repo file will do the git command 
+":Goyo (= show only the text)
+":TestFile (= test a testfile)
+":TestLast / :TestNearest (= test testfile)
