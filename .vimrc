@@ -17,9 +17,6 @@ Plug 'rakr/vim-one'
 "Plug '~/.fzf'
 "Plug 'junegunn/fzf.vim'
 
-" Better manage Vim sessions.
-Plug 'tpope/vim-obsession'
-
 " Pass focus events from tmux to Vim (useful for autoread and linting tools).
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
@@ -43,9 +40,6 @@ Plug 'nelstrom/vim-visual-star-search'
 
 " Automatically clear search highlights after you move your cursor.
 Plug 'haya14busa/is.vim'
-
-" Handle multi-file find and replace.
-Plug 'mhinz/vim-grepper'
 
 " Toggle comments in various ways.
 Plug 'tpope/vim-commentary'
