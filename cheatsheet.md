@@ -59,7 +59,7 @@
 
      * `ctrl + b + c` create a new tab
      * `ctrl + b + number ` select the tab
-     * `ctrl + [ , after ctrl + space and select what you want to copy, then ctrl + w` copy + paste
+     * `ctrl + [ (enter in copy mode) after ctrl + space (select what you want to copy) , then ctrl + w to copy, ctrl + w + ] (to paste)` copy + paste
      *
 
 ---
