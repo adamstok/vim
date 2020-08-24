@@ -500,7 +500,7 @@ xnoremap <Leader>g gqa
 
 
 " ----------------- BASIC CHEATSHEET -------------
-" Vundle Plugin manager: https://github.com/VundleVim/Vundle.vim
+"-----------------  Vundle Plugin manager: https://github.com/VundleVim/Vundle.vim
 "------------------F4 (= add ctags)"
 "------------------ctrl+] (= go to tag), ctrl+w+] (= open tag in horizontal split)
 "------------------:ls (= list buffers)"
@@ -509,12 +509,12 @@ xnoremap <Leader>g gqa
 "------------------:e filename (= open filename)
 "------------------:vs (= vsplit)
 "------------------:tabedit (= open a new vim tab, gt 2gt,3gt etc switch btw the tabs)
-":help ^n  :help i_^n  (= show doc for ctrl+n , show doc for ctrl+n in insert mode)
-"control+w+= (= resize windows when splitted to be equal)
-"control+w+< or > (resize when splitted vertically)
-"control+w+(+/-) (resize when splitted horizontally)
-"ctrl+pg up (switching btw tabs in the terminal)
-":PluginInstall (vundle install plugins)
+"------------------:help ^n  :help i_^n  (= show doc for ctrl+n , show doc for ctrl+n in insert mode)
+"-------------------control+w+= (= resize windows when splitted to be equal)
+"-------------------control+w+< or > (resize when splitted vertically)
+"-------------------control+w+(+/-) (resize when splitted horizontally)
+"-------------------ctrl+pg up (switching btw tabs in the terminal)
+"-------------------:PluginInstall (vundle install plugins)
 "shit+print screen (= ubuntu, select an area an do a print screen of it)
 "ctrl+w+arrow (= switch btw windows when splitted)
 "j (= cursor goes one line down)
