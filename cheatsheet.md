@@ -20,6 +20,14 @@
      * `PlugInstall` [install plugins](https://github.com/junegunn/vim-plug)
      * `ctrl + w + arrow` switch btw windows
      * `nj, nk` go n lines down, n lines up
+     * `ga` show the hex and octal of the letter under cursor
+     * `g8` show the hex of the letter under cursor
+     * `/name or *(on the word we want to search)` search the word
+     * `:%s/name1/name2/g` replace name1 with name2 globally
+     * `shift + j` takes the line below and add it to the cursor line
+     * `gJ` the same as shift + j but keeps the tabs and space
+     * `< >in visual mode` indent lines
+     * `viw` select the word under cursor in visual mode
      *
 
 ---
