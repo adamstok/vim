@@ -501,14 +501,14 @@ xnoremap <Leader>g gqa
 
 " ----------------- BASIC CHEATSHEET -------------
 " Vundle Plugin manager: https://github.com/VundleVim/Vundle.vim
-"F4 (= add ctags)"
-"ctrl+] (= go to tag), ctrl+w+] (= open tag in horizontal split)
-":ls (= list buffers)"
-":b name (= open buffer name)"
-":edit . (= don't forget the dot at the end , open the folder tree )
-":e filename (= open filename)
-":vs (= vsplit)
-":tabedit (= open a new vim tab, gt 2gt,3gt etc switch btw the tabs)
+"------------------F4 (= add ctags)"
+"------------------ctrl+] (= go to tag), ctrl+w+] (= open tag in horizontal split)
+"------------------:ls (= list buffers)"
+"------------------:b name (= open buffer name)"
+"------------------:edit . (= don't forget the dot at the end , open the folder tree )
+"------------------:e filename (= open filename)
+"------------------:vs (= vsplit)
+"------------------:tabedit (= open a new vim tab, gt 2gt,3gt etc switch btw the tabs)
 ":help ^n  :help i_^n  (= show doc for ctrl+n , show doc for ctrl+n in insert mode)
 "control+w+= (= resize windows when splitted to be equal)
 "control+w+< or > (resize when splitted vertically)
