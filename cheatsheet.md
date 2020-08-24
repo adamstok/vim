@@ -42,13 +42,25 @@
      * `ci{` delete all btw {} and enter in insert mode
      * `vi{` same as ci{ but enter in visual mode
      * `f( then ci(` search for ( then delete all btw ()!!! 
+     * `leader + h/j/k/l` go to the window on the left / down / up / right
+     * `leader + pv ` open a tree window on the left side
+     * `leader + u ` open undo tree on the left side
+     * `in visual block select and type :norm I + space ` go to insert mode and add a space
+     * `p or leader p ` paste 
+     *
 
 ---
 2. Terminal:
 
      * `ctrl + pg up / pg down` switch btw tabs
+     * `ctrl + shift + t ` open a new tab
 ---
 3. Tmux:
+
+     * `ctrl + b + c` create a new tab
+     * `ctrl + b + number ` select the tab
+     * `ctrl + [ , after ctrl + space and select what you want to copy, then ctrl + w` copy + paste
+     *
 
 ---
 4. Ubuntu:

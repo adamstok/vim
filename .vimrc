@@ -549,29 +549,29 @@ xnoremap <Leader>g gqa
 " ------------------- vi{ (= select all btw {} and enter visual mode)
 " ------------------- f( then ci( (= on the line find (, then delete all in the () and enter in
 "  ------------------- insert mode ) !!
-"ci' (= delete all in the nearest '' and enter in insert mode)
-"terminal ubuntu ctrl+shit+t (= open new tab in terminal)
-"leader = space ,so ....
-"space + h/j/k/l (= go to next window, when splitted)
-"space+h or space+l (= when splitted windows, go to the left/right window)
-"space+pv (= open a tree window)
-"space+u  (= go to undotree on the left)
-"in tmux, ctrl+b+c (= create new tab)
-"in tmux, ctrl+b+number (= select the tab)
-"in tmux the tabs are enumerated below,... i think so :P
-"in visual block select the lines, press : , type norm I + space (= it will
-"add a space on selected lines)
-"after yank, in normal mode press p, and it will paste how many times you want
-"!
-"
-" tmux copy - paste :
-" Enter ‘copy mode’ by pressing CTRL+b, [.
-" Use the arrow keys to go to the position from where you want to start
-" copying. Press CTRL+SPACE to start copying.
-" Use arrow keys to go to the end of text you want to copy. Press ALT+w or
-" CTRL+w to copy into Tmux buffer.
-" Press CTRL+b, ] to paste in a possibly different Tmux pane/window.
-" :noh (= no highlight after search)
+"  -------------------  ci' (= delete all in the nearest '' and enter in insert mode)
+"  -------------------  terminal ubuntu ctrl+shit+t (= open new tab in terminal)
+"  -------------------  leader = space ,so ....
+"  -------------------  space + h/j/k/l (= go to next window, when splitted)
+"  -------------------  space+h or space+l (= when splitted windows, go to the left/right window)
+"  -------------------  space+pv (= open a tree window)
+"  -------------------  space+u  (= go to undotree on the left)
+"  -------------------  in tmux, ctrl+b+c (= create new tab)
+"  -------------------  in tmux, ctrl+b+number (= select the tab)
+"  -------------------  in tmux the tabs are enumerated below,... i think so :P
+"  -------------------  in visual block select the lines, press : , type norm I + space (= it will
+"  -------------------  add a space on selected lines)
+"  -------------------  after yank, in normal mode press p, and it will paste how many times you want
+"  -------------------  !
+"  -------------------  
+"  -------------------   tmux copy - paste :
+"  -------------------   Enter ‘copy mode’ by pressing CTRL+b, [.
+"  -------------------   Use the arrow keys to go to the position from where you want to start
+"  -------------------   copying. Press CTRL+SPACE to start copying.
+"  -------------------   Use arrow keys to go to the end of text you want to copy. Press ALT+w or
+"  -------------------   CTRL+w to copy into Tmux buffer.
+"  -------------------   Press CTRL+b, ] to paste in a possibly different Tmux pane/window.
+"  -------------------   :noh (= no highlight after search)
 " after search => n = next find, N = previous find
 "tmux ctrl+b+w (= show previous windows)
 "i (in tree so in pv shows the mod date, size etc of the files/folder)
