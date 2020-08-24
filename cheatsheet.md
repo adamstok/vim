@@ -22,13 +22,26 @@
      * `nj, nk` go n lines down, n lines up
      * `ga` show the hex and octal of the letter under cursor
      * `g8` show the hex of the letter under cursor
-     * `/name or *(on the word we want to search)` search the word
+     * `/name or *(on the word we want to search) or gd ` search the word
      * `:%s/name1/name2/g` replace name1 with name2 globally
      * `shift + j` takes the line below and add it to the cursor line
      * `gJ` the same as shift + j but keeps the tabs and space
      * `< >in visual mode` indent lines
      * `viw` select the word under cursor in visual mode
-     *
+     * `shift + u` uppercase the selected in visual mode word
+     * `u` undo
+     * `viw then g~` lowercase the selected word 
+     * `gg / GG` got to the top / at the end of the file
+     * `:noh` no highlight
+     * `g??` encode / decode the word
+     * `/\d\{12}` search 12 digits
+     * `gv` if you highlighted a block and you want to re-highlight it again
+     * `gi` go to the last insert
+     * `di{` delete all btw {} - the cursor must be btw the {}
+     * `da{` same as di{ but delete also the {} 
+     * `ci{` delete all btw {} and enter in insert mode
+     * `vi{` same as ci{ but enter in visual mode
+     * `f( then ci(` search for ( then delete all btw ()!!! 
 
 ---
 2. Terminal:
