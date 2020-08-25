@@ -592,18 +592,18 @@ xnoremap <Leader>g gqa
 "  -------------------   f5 (= toggle SpellCheck)
 "  -------------------   :DirDiff dir1 dir2 (= diff btw dirs)
 "  -------------------   :Delete (= Delete a buffer and the file on the disk )
-":Move: Rename a buffer and the file on disk simultaneously.
-":Rename: Like :Move, but relative to the current file's containing directory.
-":Linediff (= in visual mode select one block, then :Linediff , select second
-"block - then Linediff -> it will show the diff btw selected blocks )
-" * on selected word will serch the word in the text :w
-" after searching the word with * , leader r to replace the word, or leader rc
-" to select each word and decide to replace it or not
-" after serch , go to next value with n or * 
-" :Grepper (= search for a word in files and show/modify it)
-" [space / ]space (= add new line before / after cursor line)
-"[e / ]e (= exchange current line with one above or below)
-":G + git command on a git repo file will do the git command 
-":Goyo (= show only the text)
-":TestFile (= test a testfile)
-":TestLast / :TestNearest (= test testfile)
+"  ------------------- :Move: Rename a buffer and the file on disk simultaneously.
+"  ------------------- :Rename: Like :Move, but relative to the current file's containing directory.
+"  ------------------- :Linediff (= in visual mode select one block, then :Linediff , select second
+"  ------------------- block - then Linediff -> it will show the diff btw selected blocks )
+"  -------------------  * on selected word will serch the word in the text :w
+"  -------------------  after searching the word with * , leader r to replace the word, or leader rc
+"  -------------------  to select each word and decide to replace it or not
+"  -------------------  after serch , go to next value with n or * 
+"  -------------------  :Grepper (= search for a word in files and show/modify it)
+"  -------------------  [space / ]space (= add new line before / after cursor line)
+"  ------------------- [e / ]e (= exchange current line with one above or below)
+"  ------------------- :G + git command on a git repo file will do the git command 
+"  ------------------- :Goyo (= show only the text)
+"  ------------------- :TestFile (= test a testfile)
+"  ------------------- :TestLast / :TestNearest (= test testfile)

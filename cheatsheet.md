@@ -23,6 +23,7 @@
      * `ga` show the hex and octal of the letter under cursor
      * `g8` show the hex of the letter under cursor
      * `/name or *(on the word we want to search) or gd ` search the word
+     * `leader + r or leader + rc ` to replace the word , or select each word and decide to replace it or not (after a search)
      * `n or N` next / prev after a search
      * `:%s/name1/name2/g` replace name1 with name2 globally
      * `shift + j` takes the line below and add it to the cursor line
@@ -58,6 +59,14 @@
      * `f5 ` toggle Spellcheck
      * `:DirDiff dir1 dir2` difference btw dir1 & dir2
      * `:Delete` delete a buffer and the file on disk simultaneously
+     * `:Move ` rename a buffer and the file on the disk
+     * `:Rename ` like :move but relative to the current file
+     * `:Linediff (in visual mode select the first block to compare, then :Linediff, select the second block to compare, then :Linediff) ` it shows the difference btw the selected blocks 
+     * `[ + space or  ] + space ` add a new line above  / below the cursor line
+     * `[ + e or  ] + e ` exchange the current line with the line above or below
+     * `:G + git commands ` will do the git commands in vim (ex :G add .)
+     * `:Goyo ` show only the text
+     * `:TestFile or :TestLast or :TestNearest ` testing the testfiles
 
 ---
 2. Terminal:
