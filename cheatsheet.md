@@ -66,7 +66,7 @@
      * `ctrl + b + [ (enter in copy mode) after ctrl + space (select what you want to copy) , then ctrl + w to copy, ctrl + b + ] (to paste)` copy + paste
      * `ctrl + b + w ` show other windows
      * `ctrl + b + x ` kill the tab
-     * `ctrl + b + :, then kill-session ` kill the session
+     * `ctrl + b + : then kill-session ` kill the session
      * `ctrl + b + q ` show / choose window number
      *
 
