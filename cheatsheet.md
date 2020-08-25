@@ -50,7 +50,14 @@
      * `leader + u ` open undo tree on the left side
      * `in visual block select and type :norm I + space ` go to insert mode and add a space
      * `p or leader p ` paste 
-     *
+     * `:MarkdownPreview / MarkdownPreviewStop ` md preview in browser
+     * `:LimeLight / :LimeLight!` make it gray
+     * `leader + sp ` Spellcheck with cursor on the word
+     * `leader + sv ` source vimrc
+     * `leader + ev` edit vimrc
+     * `f5 ` toggle Spellcheck
+     * `:DirDiff dir1 dir2` difference btw dir1 & dir2
+     * `:Delete` delete a buffer and the file on disk simultaneously
 
 ---
 2. Terminal:

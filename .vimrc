@@ -582,16 +582,16 @@ xnoremap <Leader>g gqa
 "  -------------------  in vim gc (=  comment lines)
 "  -------------------  in terminal ctrl+shift+t (= open new tab)
 "  -------------------  in terminal ls -laR (=show files even in subfolders)
-":MarkdownPreview
-":MarkdownPreviewStop
-":LimeLight (= make it gray)
-":LimeLight!
-"leader + sp (= SpellCheck)
-"leader + sv (= source vimrc)
-"leader + ev (= edit vimrc)
-"f5 (= toggle SpellCheck)
-":DirDiff dir1 dir2 (= diff btw dirs)
-":Delete (= Delete a buffer and the file on the disk )
+"  -------------------   :MarkdownPreview
+"  -------------------   :MarkdownPreviewStop
+"  -------------------   :LimeLight (= make it gray)
+"  -------------------   :LimeLight!
+"  -------------------   leader + sp (= SpellCheck)
+"  -------------------   leader + sv (= source vimrc)
+"  -------------------   leader + ev (= edit vimrc)
+"  -------------------   f5 (= toggle SpellCheck)
+"  -------------------   :DirDiff dir1 dir2 (= diff btw dirs)
+"  -------------------   :Delete (= Delete a buffer and the file on the disk )
 ":Move: Rename a buffer and the file on disk simultaneously.
 ":Rename: Like :Move, but relative to the current file's containing directory.
 ":Linediff (= in visual mode select one block, then :Linediff , select second
