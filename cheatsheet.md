@@ -23,6 +23,7 @@
      * `ga` show the hex and octal of the letter under cursor
      * `g8` show the hex of the letter under cursor
      * `/name or *(on the word we want to search) or gd ` search the word
+     * `n or N` next / prev after a search
      * `:%s/name1/name2/g` replace name1 with name2 globally
      * `shift + j` takes the line below and add it to the cursor line
      * `gJ` the same as shift + j but keeps the tabs and space
@@ -37,6 +38,7 @@
      * `/\d\{12}` search 12 digits
      * `gv` if you highlighted a block and you want to re-highlight it again
      * `gi` go to the last insert
+     * `gc ` comment lines
      * `di{` delete all btw {} - the cursor must be btw the {}
      * `da{` same as di{ but delete also the {} 
      * `ci{` delete all btw {} and enter in insert mode
@@ -44,6 +46,7 @@
      * `f( then ci(` search for ( then delete all btw ()!!! 
      * `leader + h/j/k/l` go to the window on the left / down / up / right
      * `leader + pv ` open a tree window on the left side
+     * `i in tree window` show more info about files / folders
      * `leader + u ` open undo tree on the left side
      * `in visual block select and type :norm I + space ` go to insert mode and add a space
      * `p or leader p ` paste 
@@ -54,12 +57,17 @@
 
      * `ctrl + pg up / pg down` switch btw tabs
      * `ctrl + shift + t ` open a new tab
+     * `ls -laR` show files even in subfolders
 ---
 3. Tmux:
 
      * `ctrl + b + c` create a new tab
      * `ctrl + b + number ` select the tab
-     * `ctrl + [ (enter in copy mode) after ctrl + space (select what you want to copy) , then ctrl + w to copy, ctrl + w + ] (to paste)` copy + paste
+     * `ctrl + b + [ (enter in copy mode) after ctrl + space (select what you want to copy) , then ctrl + w to copy, ctrl + b + ] (to paste)` copy + paste
+     * `ctrl + b + w ` show other windows
+     * `ctrl + b + x ` kill the tab
+     * `ctrl + b + :, then kill-session ` kill the session
+     * `ctrl + b + q ` show / choose window number
      *
 
 ---

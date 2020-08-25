@@ -572,16 +572,16 @@ xnoremap <Leader>g gqa
 "  -------------------   CTRL+w to copy into Tmux buffer.
 "  -------------------   Press CTRL+b, ] to paste in a possibly different Tmux pane/window.
 "  -------------------   :noh (= no highlight after search)
-" after search => n = next find, N = previous find
-"tmux ctrl+b+w (= show previous windows)
-"i (in tree so in pv shows the mod date, size etc of the files/folder)
-"tmux ctrl+b+x (= kill the tab)
-"tmux ctrl+b+: and kill-session (= kill session ! :D)
-"tmux ctrl+b+q (= show and choose window number)
-"tmux ctrl+b+c (= create new window)
-"in vim gc (=  comment lines)
-"in terminal ctrl+shift+t (= open new tab)
-"in terminal ls -laR (=show files even in subfolders)
+"   -------------------   after search => n = next find, N = previous find
+"  -------------------  tmux ctrl+b+w (= show previous windows)
+"  -------------------  i (in tree so in pv shows the mod date, size etc of the files/folder)
+"  -------------------  tmux ctrl+b+x (= kill the tab)
+"  -------------------  tmux ctrl+b+: and kill-session (= kill session ! :D)
+"  -------------------  tmux ctrl+b+q (= show and choose window number)
+"  -------------------  tmux ctrl+b+c (= create new window)
+"  -------------------  in vim gc (=  comment lines)
+"  -------------------  in terminal ctrl+shift+t (= open new tab)
+"  -------------------  in terminal ls -laR (=show files even in subfolders)
 ":MarkdownPreview
 ":MarkdownPreviewStop
 ":LimeLight (= make it gray)
