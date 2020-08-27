@@ -90,6 +90,7 @@
 4. Ubuntu:
 
      * `shift + print screen` select an area + print screen
+     * `alt + tab + arrow  ` switch btw opened windows / apps
 
 
 
