@@ -92,6 +92,7 @@
      * `shift + print screen` select an area + print screen
      * `alt + tab + arrow  ` switch btw opened windows / apps
      * `alt + f4 ` close window
+     * `alt + l ` minimize the active window (needed to add a keyboard shortcut)
 
 
 
