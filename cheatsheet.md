@@ -67,6 +67,7 @@
      * `:G + git commands ` will do the git commands in vim (ex :G add .)
      * `:Goyo ` show only the text
      * `:TestFile or :TestLast or :TestNearest ` testing the testfiles
+     * `:tabclose ` close the tab 
 
 ---
 2. Terminal:
