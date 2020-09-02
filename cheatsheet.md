@@ -94,6 +94,7 @@
      * `alt + tab + arrow  ` switch btw opened windows / apps
      * `alt + f4 ` close window
      * `super + h ` minimize the active window
+     * `super + m ` toggle notification tray 
 
 
 
