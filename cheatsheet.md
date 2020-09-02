@@ -95,6 +95,7 @@
      * `alt + f4 ` close window
      * `super + h ` minimize the active window
      * `super + m ` toggle notification tray 
+     * `ctrl + alt + arrow ` move btw workspaces
 
 
 
