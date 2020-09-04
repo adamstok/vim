@@ -68,6 +68,7 @@
      * `:Goyo ` show only the text
      * `:TestFile or :TestLast or :TestNearest ` testing the testfiles
      * `:tabclose ` close the tab 
+     * `dd ` delete the line
 
 ---
 2. Terminal:
