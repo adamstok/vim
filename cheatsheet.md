@@ -69,6 +69,7 @@
      * `:TestFile or :TestLast or :TestNearest ` testing the testfiles
      * `:tabclose ` close the tab 
      * `dd ` delete the line
+     * `v or V ` v=select from cursor point, V select all the line directly  
 
 ---
 2. Terminal:
