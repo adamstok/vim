@@ -70,6 +70,7 @@
      * `:tabclose ` close the tab 
      * `dd ` delete the line
      * `v or V ` v=select from cursor point, V select all the line directly  
+     * `:%s/.$//g` delete any character at the end of the line 
 
 ---
 2. Terminal:
