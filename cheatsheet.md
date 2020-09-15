@@ -63,6 +63,7 @@
      * `:Rename ` like :move but relative to the current file
      * `:Linediff (in visual mode select the first block to compare, then :Linediff, select the second block to compare, then :Linediff) ` it shows the difference btw the selected blocks 
      * `[ + space or  ] + space ` add a new line above  / below the cursor line
+     * `o ` in normal mode add a new line below 
      * `[ + e or  ] + e ` exchange the current line with the line above or below
      * `:G + git commands ` will do the git commands in vim (ex :G add .)
      * `:Goyo ` show only the text
