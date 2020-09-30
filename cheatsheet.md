@@ -113,6 +113,8 @@
      * `ctrl + alt + arrow ` move btw workspaces
      * `sudo apt-cache search package_name`  search the package_name
      * `sudo apt-get purge package_name ` purge completely a package from the system
+     * `ctrl + alt + arrow up/down ` go to the another workspace
+     * `ctrl + alt + shift + arrow ` move the current window to another workspace
 
 
 
