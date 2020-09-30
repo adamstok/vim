@@ -72,6 +72,17 @@
      * `dd ` delete the line
      * `v or V ` v=select from cursor point, V select all the line directly  
      * `:%s/.$//g` delete any character at the end of the line 
+     * `b ` one word back 
+     * `w ` one word forward 
+     * `cw ` change the current word
+     * `yy ` yank the current line 
+     * `3yy ` yank the next 3 lines 
+     * `yw ` yank the current word
+     * `y$ ` yank to the end of the line
+     * `p / P `  paste before cursor / paste after cursor
+     * `a / A ` enter insert mode after the cursor / at the end of the line
+     * `i / I ` enter insert mode right before the cursor / at the beginning of the line
+     * `o / O ` enter insert mode on a blank line after the cursor / on a blank line before cursor
 
 ---
 2. Terminal:
@@ -100,6 +111,8 @@
      * `super + h ` minimize the active window
      * `super + m ` toggle notification tray 
      * `ctrl + alt + arrow ` move btw workspaces
+     * `sudo apt-cache search package_name`  search the package_name
+     * `sudo apt-get purge package_name ` purge completely a package from the system
 
 
 
