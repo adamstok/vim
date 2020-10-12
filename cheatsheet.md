@@ -83,6 +83,7 @@
      * `a / A ` enter insert mode after the cursor / at the end of the line
      * `i / I ` enter insert mode right before the cursor / at the beginning of the line
      * `o / O ` enter insert mode on a blank line after the cursor / on a blank line before cursor
+     * `:CocCommand python.setInterpreter ` select python interpreter for coc
 
 ---
 2. Terminal:
