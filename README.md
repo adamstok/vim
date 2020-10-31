@@ -34,5 +34,10 @@ On a clean Linux distribution install:
     `source ~/.zshrc` then restart the terminal
 
 * Tmux:
+
+    copy [.tmux.conf](https://github.com/adamstok/vim/blob/master/.tmux.conf) to your home directory and in a tmux session just make:
+
+    `:source-file ~/.tmux.conf`
+
 * Neovim:
 
