@@ -23,7 +23,7 @@ On a clean Linux distribution install:
 
 * ZSH:
 
-    replace ~/.zshrc with [.zsh](https://raw.githubusercontent.com/adamstok/vim/master/.zshrc)
+    replace ~/.zshrc with [.zshrc](https://raw.githubusercontent.com/adamstok/vim/master/.zshrc)
 
     in the .zshrc file change /username/ to your account name
 
