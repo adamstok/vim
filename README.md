@@ -29,4 +29,4 @@ On a clean Linux distribution install:
 * Tmux:
 * Neovim:
 
-
+``
