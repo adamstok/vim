@@ -12,6 +12,8 @@ On a clean Linux distribution install:
   * [k](https://github.com/supercrabtree/k)
   * [zsh-syntax-hightighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
   * [ZSH-z](https://github.com/agkozak/zsh-z)
+  * [fzf](https://github.com/junegunn/fzf#installation)
+  * ranger  -> sudo apt install ranger
 * [Tmux](https://github.com/tmux/tmux/wiki/Installing)
 * [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
@@ -34,4 +36,3 @@ On a clean Linux distribution install:
 * Tmux:
 * Neovim:
 
-``
