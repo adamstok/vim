@@ -104,9 +104,9 @@ source $ZSH/oh-my-zsh.sh
 #alias pycharm=/snap/pycharm-professional/198/bin/pycharm.sh
 alias c=clear
 alias lsgrep=/home/username/Documents/lsgrep
-alias vim=nvim
 #(ls | grep $1)
-source /home/ast/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias vim=nvim
+source /home/username/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

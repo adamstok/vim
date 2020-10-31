@@ -85,7 +85,7 @@
      * `o / O ` enter insert mode on a blank line after the cursor / on a blank line before cursor
      * `:CocCommand python.setInterpreter ` select python interpreter for coc
      * `leader + prw ` coc search the word under cursor in all project files (nice to refactor a name everywhere )
-     * `ctrl + backspace ` open virtual split  
+     * `ctrl + backspace ` open vertical split  
 
 ---
 2. Terminal:

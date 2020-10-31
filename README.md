@@ -11,6 +11,7 @@ On a clean Linux distribution install:
   * [zsh-completion](https://github.com/zsh-users/zsh-completions)
   * [k](https://github.com/supercrabtree/k)
   * [zsh-syntax-hightighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+  * [ZSH-z](https://github.com/agkozak/zsh-z)
 * [Tmux](https://github.com/tmux/tmux/wiki/Installing)
 * [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
@@ -19,6 +20,10 @@ On a clean Linux distribution install:
 ##### Configure
 
 * ZSH:
+
+    replace ~/.zshrc with [.zsh](https://raw.githubusercontent.com/adamstok/vim/master/.zshrc)
+
+    in the .zshrc file change /username/ to your account name
 
     `$sudo chsh -s $(which zsh) $(whoami)` -> make zsh the default shell
 
