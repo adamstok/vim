@@ -99,10 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#alias python=python3
-#alias pip=pip3
-#alias conda=/home/ast/miniconda3/bin/conda
-#alias pycharm=/snap/pycharm-professional/198/bin/pycharm.sh
 alias c=clear
 alias lsgrep=/home/username/Documents/lsgrep
 #(ls | grep $1)
