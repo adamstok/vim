@@ -41,7 +41,6 @@ Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree'
 Plug 'vobornik/vim-mql4'
-Plug 'Valloric/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/grep.vim'
@@ -213,7 +212,6 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
-nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
