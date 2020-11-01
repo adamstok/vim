@@ -5,6 +5,7 @@
 1. Vim:
 
      * `F4` add ctags
+     * `F8 ` show functions and variables in a splitted window
      * `ctrl + ]` go to tag
      * `ctrl + w + ]` open tag in horizontal split
      * `:ls` list buffers
