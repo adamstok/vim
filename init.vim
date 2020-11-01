@@ -10,8 +10,10 @@
 " Specify a directory for plugins.
 call plug#begin('~/.vim/plugged')
 
+" Atom One Dark / Light theme.
 Plug 'rakr/vim-one'
 Plug 'chrisbra/csv.vim'
+" Pass focus events from tmux to Vim (useful for autoread and linting tools).
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-eunuch'
 Plug 'will133/vim-dirdiff'
@@ -20,57 +22,36 @@ Plug 'inkarkat/vim-ingo-library' | Plug 'inkarkat/vim-SpellCheck'
 Plug 'machakann/vim-highlightedyank'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-unimpaired'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/AutoComplPop'
-Plug 'cakebaker/scss-syntax.vim'
 Plug 'chr4/nginx.vim'
-Plug 'chrisbra/csv.vim'
 Plug 'ekalinin/dockerfile.vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'Glench/Vim-Jinja2-Syntax'
-Plug 'godlygeek/tabular' | Plug 'tpope/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
-Plug 'jvirtanen/vim-hcl'
 Plug 'lifepillar/pgsql.vim'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'PotatoesMaster/i3-vim-syntax'
-Plug 'stephpy/vim-yaml'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'tpope/vim-git'
-Plug 'tpope/vim-liquid'
 Plug 'tpope/vim-rails'
 Plug 'vim-python/python-syntax'
-Plug 'vim-ruby/vim-ruby'
 Plug 'wgwoods/vim-systemd-syntax'
 Plug 'frazrepo/vim-rainbow'
-Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
-Plug 'basilgor/vim-autotags'
 Plug 'mbbill/undotree'
 Plug 'vobornik/vim-mql4'
 Plug 'Valloric/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-commentary'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/grep.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
-Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 call plug#end()
@@ -78,6 +59,8 @@ call plug#end()
 " -----------------------------------------------------------------------------
 " Color settings
 " -----------------------------------------------------------------------------
+
+nmap <F8> :TagbarToggle<CR>
 
 " Enable 24-bit true colors if your terminal supports it.
 if (has("termguicolors"))
@@ -174,6 +157,9 @@ let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
 
 
+
+
+
 set nocompatible              " be iMproved, required
 set path+=**
 filetype off                  " required
@@ -229,7 +215,6 @@ nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 
-
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
@@ -243,7 +228,8 @@ nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>rr <Plug>(coc-rename)
+nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 "show all diagnostics.
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
@@ -251,8 +237,8 @@ nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
 
 
-let g:coc_user_config = {}
-let g:coc_user_config['coc.preferences.jumpCommand'] = ':SplitIfNotOpen4COC'
+" let g:coc_user_config = {}
+" let g:coc_user_config['coc.preferences.jumpCommand'] = ':SplitIfNotOpen4COC'
 
 
 function! WinMove(key)
