@@ -1,3 +1,8 @@
+set nocompatible
+" Syntax highlight
+" Default highlight is better than polyglot
+let g:polyglot_disabled = ['python']
+let python_highlight_all = 1
 
 " -----------------------------------------------------------------------------
 " This config is targeted for Vim 8.0+ and expects you to have Plug installed.
@@ -150,16 +155,7 @@ augroup vimrc-python
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
-" Syntax highlight
-" Default highlight is better than polyglot
-let g:polyglot_disabled = ['python']
-let python_highlight_all = 1
 
-
-
-
-
-set nocompatible              " be iMproved, required
 set path+=**
 filetype off                  " required
 syntax on
