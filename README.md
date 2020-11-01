@@ -58,6 +58,22 @@ On a clean Linux distribution install:
 
     `:CocInstall coc-tsserver`
 
+    `:CocInstall coc-json`
+
+    `:CocConfig`
+
+    Then in the opened coc-settings.json put:
+
+    ```
+    {
+
+	"coc.preferences.formatOnType": true,
+	"coc.preferences.formatOnSaveFiletypes": ["python"]
+
+    }
+    ```
+
+
     If there is a problem with the installation of markdown-preview, do:
     `:PlugUpdate! markdown-preview.nvim`
 
