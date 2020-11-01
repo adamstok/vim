@@ -41,3 +41,23 @@ On a clean Linux distribution install:
 
 * Neovim:
 
+    If there is no ~/.config/nvim directory create one:
+    `mkdir -p ~/.config/nvim`
+
+    Copy [init.vim](https://github.com/adamstok/vim/blob/master/init.vim) to your ~/.config/nvim directory
+
+    In the terminal: `sudo apt install yarn`
+
+    Install [vim-plug](https://github.com/junegunn/vim-plug)
+
+    `:source ~/.config/nvim/init.vim`
+
+    `:PlugInstall`
+
+    `:CocInstall coc-python`
+
+    `:CocInstall coc-tsserver`
+
+    If there is a problem with the installation of markdown-preview, do:
+    `:PlugUpdate! markdown-preview.nvim`
+
