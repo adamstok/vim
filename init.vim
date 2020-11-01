@@ -437,23 +437,3 @@ xmap <Leader>R
 
 
 
-" .............................................................................
-" junegunn/limelight.vim
-" .............................................................................
-
-let g:limelight_conceal_ctermfg=244
-
-
-" .............................................................................
-" SirVer/ultisnips
-" .............................................................................
-
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-
-" Format paragraph (selected or not) to 80 character lines.
-nnoremap <Leader>g gqap
-xnoremap <Leader>g gqa
-
-
