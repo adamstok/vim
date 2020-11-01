@@ -10,69 +10,21 @@
 " Specify a directory for plugins.
 call plug#begin('~/.vim/plugged')
 
-" Atom One Dark / Light theme.
 Plug 'rakr/vim-one'
 Plug 'chrisbra/csv.vim'
-
-" Integrate fzf with Vim.
-"Plug '~/.fzf'
-"Plug 'junegunn/fzf.vim'
-
-" Pass focus events from tmux to Vim (useful for autoread and linting tools).
 Plug 'tmux-plugins/vim-tmux-focus-events'
-
-" Helpers for moving and manipulating files / directories.
 Plug 'tpope/vim-eunuch'
-
-" Run a diff on 2 directories.
 Plug 'will133/vim-dirdiff'
-
-" Run a diff on 2 blocks of text.
 Plug 'AndrewRadev/linediff.vim'
-
-" Add spelling errors to the quickfix list (vim-ingo-library is a dependency).
 Plug 'inkarkat/vim-ingo-library' | Plug 'inkarkat/vim-SpellCheck'
-
-" Briefly highlight which text was yanked.
 Plug 'machakann/vim-highlightedyank'
-
-" Modify * to also work with visual selections.
 Plug 'nelstrom/vim-visual-star-search'
-
-" Automatically clear search highlights after you move your cursor.
-"Plug 'haya14busa/is.vim'
-
-" Toggle comments in various ways.
 Plug 'tpope/vim-commentary'
-
-" Automatically set 'shiftwidth' + 'expandtab' (indention) based on file type.
 Plug 'tpope/vim-sleuth'
-
-" A number of useful motions for the quickfix list, pasting and more.
 Plug 'tpope/vim-unimpaired'
-
-" Show git file changes in the gutter.
 Plug 'mhinz/vim-signify'
-
-" A git wrapper.
 Plug 'tpope/vim-fugitive'
-
-" Dim paragraphs above and below the active paragraph.
-"Plug 'junegunn/limelight.vim'
-
-" Distraction free writing by removing UI elements and centering everything.
-"Plug 'junegunn/goyo.vim'
-
-" A bunch of useful language related snippets (ultisnips is the engine).
-"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" Automatically show Vim's complete menu while typing.
 Plug 'vim-scripts/AutoComplPop'
-
-" Run test suites for various languages.
-"Plug 'janko/vim-test'
-
-" Languages and file types.
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chr4/nginx.vim'
 Plug 'chrisbra/csv.vim'
@@ -94,20 +46,15 @@ Plug 'tpope/vim-rails'
 Plug 'vim-python/python-syntax'
 Plug 'vim-ruby/vim-ruby'
 Plug 'wgwoods/vim-systemd-syntax'
-
-"-------------- My old Plugs -------------------
 Plug 'frazrepo/vim-rainbow'
 Plug 'mileszs/ack.vim'
 Plug 'w0rp/ale'
-"Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'basilgor/vim-autotags'
 Plug 'mbbill/undotree'
 Plug 'vobornik/vim-mql4'
-"Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-
 Plug 'tpope/vim-commentary'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -118,30 +65,13 @@ Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/indentLine'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
-
-"" HTML Bundle
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
-
-
-" javascript
-"" Javascript Bundle
 Plug 'jelera/vim-javascript-syntax'
-
-
-" python
-"" Python Bundle
 Plug 'davidhalter/jedi-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
-
-
-
-"----------------------------------
-
-
 
 call plug#end()
 
@@ -244,9 +174,6 @@ let g:polyglot_disabled = ['python']
 let python_highlight_all = 1
 
 
-
-
-
 set nocompatible              " be iMproved, required
 set path+=**
 filetype off                  " required
@@ -300,14 +227,9 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
-"nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
+nnoremap <silent> <leader>gr :YcmCompleter GoToReferences<CR>
 
 
-" 
-" + =============================================================+
-" + =============================================================+
-" + =============================================================+
-" + =============================================================+
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
@@ -316,7 +238,6 @@ inoremap <silent><expr> <C-space> coc#refresh()
 "GoTo code navigation
 nmap <leader>g <C-o>
 nmap <silent> gd :<C-u>call CocAction('jumpDefinition','vsplit')<cr>
-
 " nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -549,115 +470,4 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 nnoremap <Leader>g gqap
 xnoremap <Leader>g gqa
 
-
-
-" ----------------- BASIC CHEATSHEET -------------
-" Vundle Plugin manager: https://github.com/VundleVim/Vundle.vim
-"F4 (= add ctags)"
-"ctrl+] (= go to tag), ctrl+w+] (= open tag in horizontal split)
-":ls (= list buffers)"
-":b name (= open buffer name)"
-":edit . (= don't forget the dot at the end , open the folder tree )
-":e filename (= open filename)
-":vs (= vsplit)
-":tabedit (= open a new vim tab, gt 2gt,3gt etc switch btw the tabs)
-":help ^n  :help i_^n  (= show doc for ctrl+n , show doc for ctrl+n in insert mode)
-"control+w+= (= resize windows when splitted to be equal)
-"control+w+< or > (resize when splitted vertically)
-"control+w+(+/-) (resize when splitted horizontally)
-"ctrl+pg up (switching btw tabs in the terminal)
-":PluginInstall (vundle install plugins)
-"shit+print screen (= ubuntu, select an area an do a print screen of it)
-"ctrl+w+arrow (= switch btw windows when splitted)
-"j (= cursor goes one line down)
-"k (= cursor goes one line up)
-"ga (= show the hex and octal of the letter under cursor )
-"g8 (= show the hex only)
-"g< (= show the last output)
-"/name (= search name , without replacement)
-":%s/name1/replace_name/g (= replace name1 with replace_name globally)
-":%s/name1/replace_name then g& (= replace name1 with replace_name + g& -
-"globally)
-"shift+j (= takes the line below and add it to the cursor line)
-"gJ (= shift+j but keeps the tabs and space)
-"in visual block (ctrl+v) select the block and press < or > to indent the
-"block
-"viw (= select the word under cursor)
-"shift+u (= uppercase the selected word)
-"u (= undo)
-"viw then g~ (= lowercase the selected word)
-"gd (= jump to defenition)
-"* (= go on top of the file)
-"gg (= go on top)
-"GG (= go at the end of the file)
-"8j or 8k (= goes 7 lines down, up)
-"g?? (= encode, decode the line )
-"/\d\{12} (= search 12 digits)
-"gv (= if you highlighted a block and want to re-highlight it again)
-"gi (= goes to the last insert)
-"di{ (= delete all btw {} )
-"da{ (= delete all in and  with the {} )
-"ci{ (= delete all btw {} and enter the insert mode)
-"vi{ (= select all btw {} and enter visual mode)
-"f( then ci( (= on the line find (, then delete all in the () and enter in
-"insert mode ) !!
-"ci' (= delete all in the nearest '' and enter in insert mode)
-"terminal ubuntu ctrl+shit+t (= open new tab in terminal)
-"leader = space ,so ....
-"space + h/j/k/l (= go to next window, when splitted)
-"space+h or space+l (= when splitted windows, go to the left/right window)
-"space+pv (= open a tree window)
-"space+u  (= go to undotree on the left)
-"in tmux, ctrl+b+c (= create new tab)
-"in tmux, ctrl+b+number (= select the tab)
-"in tmux the tabs are enumerated below,... i think so :P
-"in visual block select the lines, press : , type norm I + space (= it will
-"add a space on selected lines)
-"after yank, in normal mode press p, and it will paste how many times you want
-"!
-"
-" tmux copy - paste :
-" Enter ‘copy mode’ by pressing CTRL+b, [.
-" Use the arrow keys to go to the position from where you want to start
-" copying. Press CTRL+SPACE to start copying.
-" Use arrow keys to go to the end of text you want to copy. Press ALT+w or
-" CTRL+w to copy into Tmux buffer.
-" Press CTRL+b, ] to paste in a possibly different Tmux pane/window.
-" :noh (= no highlight after search)
-" after search => n = next find, N = previous find
-"tmux ctrl+b+w (= show previous windows)
-"i (in tree so in pv shows the mod date, size etc of the files/folder)
-"tmux ctrl+b+x (= kill the tab)
-"tmux ctrl+b+: and kill-session (= kill session ! :D)
-"tmux ctrl+b+q (= show and choose window number)
-"tmux ctrl+b+c (= create new window)
-"in vim gc (=  comment lines)
-"in terminal ctrl+shift+t (= open new tab)
-"in terminal ls -laR (=show files even in subfolders)
-":MarkdownPreview
-":MarkdownPreviewStop
-":LimeLight (= make it gray)
-":LimeLight!
-"leader + sp (= SpellCheck)
-"leader + sv (= source vimrc)
-"leader + ev (= edit vimrc)
-"f5 (= toggle SpellCheck)
-":DirDiff dir1 dir2 (= diff btw dirs)
-":Delete (= Delete a buffer and the file on the disk )
-":Move: Rename a buffer and the file on disk simultaneously.
-":Rename: Like :Move, but relative to the current file's containing directory.
-":Linediff (= in visual mode select one block, then :Linediff , select second
-"block - then Linediff -> it will show the diff btw selected blocks )
-" * on selected word will serch the word in the text :w
-" after searching the word with * , leader r to replace the word, or leader rc
-" to select each word and decide to replace it or not
-" after serch , go to next value with n or * 
-" :Grepper (= search for a word in files and show/modify it)
-" [space / ]space (= add new line before / after cursor line)
-"[e / ]e (= exchange current line with one above or below)
-":G + git command on a git repo file will do the git command 
-":Goyo (= show only the text)
-":TestFile (= test a testfile)
-":TestLast / :TestNearest (= test testfile)
-"ubunut alt+f4 (close window)
 
