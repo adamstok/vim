@@ -60,6 +60,8 @@ On a clean Linux distribution install:
 
     `:CocInstall coc-json`
 
+    `:CocInstall coc-snippets`
+
     `:CocConfig`
 
     Then in the opened coc-settings.json put:
