@@ -9,6 +9,7 @@
      * `ctrl + ]` go to tag
      * `ctrl + w + ]` open tag in horizontal split
      * `:ls` list buffers
+     * `:ba / :on ` ba = show all buffers in the main view / :on = show only one buffer
      * `:b name` open buffer name
      * `:edit .` (with the dot at the end ) open the folder tree 
      * `:e filename` open filename
