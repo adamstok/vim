@@ -430,4 +430,9 @@ xmap <Leader>R
      \<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
 
+" .............................................................................
+" Vertical splits
+" .............................................................................
 
+map <Leader>vs :vs<CR>
+map <Leader>vsr :vnew<CR>:RangerWorkingDirectory<CR>
