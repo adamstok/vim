@@ -108,8 +108,6 @@
      * `ctrl + b + x ` kill the tab
      * `ctrl + b + : then kill-session ` kill the session
      * `ctrl + b + q ` show / choose window number
-     *
-
 ---
 4. Ubuntu:
 
