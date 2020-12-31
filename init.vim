@@ -15,6 +15,7 @@ let python_highlight_all = 1
 " Specify a directory for plugins.
 call plug#begin('~/.vim/plugged')
 
+Plug 'ap/vim-css-color' 
 " Atom One Dark / Light theme.
 Plug 'rakr/vim-one'
 Plug 'chrisbra/csv.vim'
