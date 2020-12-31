@@ -89,6 +89,7 @@
      * `leader + prw ` coc search the word under cursor in all project files (nice to refactor a name everywhere )
      * `ctrl + backspace ` open vertical split  
      * `:read !ls -laR ` read the output of the command ls -laR  into vim
+     * `in ranger type: zh ` show hidden files
 
 ---
 2. Terminal:
@@ -96,6 +97,7 @@
      * `ctrl + pg up / pg down` switch btw tabs
      * `ctrl + shift + t ` open a new tab
      * `ls -laR` show files even in subfolders
+     * `in ranger type: zh ` show hidden files
 ---
 3. Tmux:
 
