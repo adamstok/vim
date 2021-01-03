@@ -13,6 +13,7 @@ On a clean Linux distribution install:
   * [zsh-syntax-hightighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
   * [ZSH-z](https://github.com/agkozak/zsh-z)
   * [fzf](https://github.com/junegunn/fzf#installation)
+  * [ripgrep](https://github.com/BurntSushi/ripgrep)
   * ranger  -> sudo apt install ranger
 * [Tmux](https://github.com/tmux/tmux/wiki/Installing)
 * [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
@@ -78,4 +79,6 @@ On a clean Linux distribution install:
 
     If there is a problem with the installation of markdown-preview, do:
     `:PlugUpdate! markdown-preview.nvim`
+
+    [Setup fzf and ripgrep](https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko)
 
