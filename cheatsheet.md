@@ -90,6 +90,10 @@
      * `ctrl + backspace ` open vertical split  
      * `:read !ls -laR ` read the output of the command ls -laR  into vim
      * `in ranger type: zh ` show hidden files
+     * `0 (zero)`  go at the beginning of the line
+     * `q + letter / number ` record a macro, then press q to stop the recording, ex: qv
+     * `@ + letter / number of the macro` use the macro, ex: @v
+     * `:'<,>'norm! @ + letter / number ` run the macro on the selected (in visual mode) lines, ex: :'<,>'norm! @v
 
 ---
 2. Terminal:
