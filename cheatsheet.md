@@ -126,11 +126,20 @@
      * `ctrl + alt + arrow up/down ` go to the another workspace
      * `ctrl + alt + shift + arrow ` move the current window to another workspace
      * `nautilus path ` open folder location
+---
+5. Git:
 
+    * In case of moving a git repo to another with all the commits and history:
 
+    ```
+    git clone --mirror url_of_old_repo
 
+    cd name_of_old_repo
 
+    git remote add new-origin url_of_new_repo
 
+    git push new-origin --mirror
+    ```
 
 
 
