@@ -141,5 +141,6 @@
     git push new-origin --mirror
     ```
 
+    *  `pip freeze > requirements.txt ` list the venv packages to requirements.txt file 
 
 
