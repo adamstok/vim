@@ -94,6 +94,7 @@
      * `q + letter / number ` record a macro, then press q to stop the recording, ex: qv
      * `@ + letter / number of the macro` use the macro, ex: @v
      * `:'<,>'norm! @ + letter / number ` run the macro on the selected (in visual mode) lines, ex: :'<,>'norm! @v
+     * `. or @: ` repeat the last command in normal mode ( . ) / visual mode ( @: )
 
 ---
 2. Terminal:
