@@ -108,7 +108,7 @@
 
      * `ctrl + b + c` create a new tab
      * `ctrl + b + number ` select the tab
-     * `ctrl + b + [ (enter in copy mode) after ctrl + space (select what you want to copy) , then ctrl + w to copy, ctrl + b + ] (to paste)` copy + paste
+     * `ctrl + b + [ (enter in copy mode) after ctrl + space (select what you want to copy) , then ctrl + w (or ctrl + m) to copy, ctrl + b + ] (to paste)` copy + paste
      * `ctrl + b + w ` show other windows
      * `ctrl + b + x ` kill the tab
      * `ctrl + b + : then kill-session ` kill the session
