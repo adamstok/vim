@@ -15,7 +15,7 @@
      * `:e filename` open filename
      * `vs ` vertical split
      * `:tabedit` open a new tab , gt or gT / 2gt / 3gt etc = switch btw tabs
-     * `:tabr :tabn :tabl `  tabr = tabrewind (go to the first tab), tabn = next tab, tabl = last tab
+     * `:tabr :tabn :tabl`   tabr = tabrewind (go to the first tab), tabn = next tab, tabl = last tab
      * `ctrl + w + =` resize windows to be equal 
      * `ctrl + w + < or >` resize windows when split vertically
      * `ctrl + w + - or +` resize windows when split horizontally
