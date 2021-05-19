@@ -455,3 +455,18 @@ nnoremap <silent> <Leader>h/ :vs<CR>:History/<CR>
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
+" .............................................................................
+" Ctags
+" " .............................................................................
+" 
+" Ctrl + ]  -> Go to definition
+" Ctrl + T  -> Jump back from the definition
+" Ctrl + W Ctrl + ]  -> Open definition in horizontal split
+"
+"
+" split ctag definition in a new tab Ctrl + \
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR> 
+" split ctag definition in a vertical split Alt + ]
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+

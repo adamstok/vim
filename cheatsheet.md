@@ -4,10 +4,11 @@
 
 1. Vim:
 
-     * `F4` add ctags
+     * `F4 or ctags -R (in the terminal)` add ctags
      * `F8 ` show functions and variables in a splitted window
      * `ctrl + ]` go to tag
      * `ctrl + w + ]` open tag in horizontal split
+     * `alt + ] ` open tag in a vertical split
      * `:ls` list buffers
      * `:ba / :on ` ba = show all buffers in the main view / :on = show only one buffer
      * `:b name` open buffer name
@@ -105,7 +106,7 @@
      * `ls -laR` show files even in subfolders
      * `in ranger type: zh ` show hidden files
 ---
-3. Tmux:
+3. Tux:
 
      * `ctrl + b + c` create a new tab
      * `ctrl + b + number ` select the tab
@@ -114,6 +115,9 @@
      * `ctrl + b + x ` kill the tab
      * `ctrl + b + : then kill-session ` kill the session
      * `ctrl + b + q ` show / choose window number
+     * `ctrl + b + space ` toggle tiling 
+     * `ctrl + b + :move-pane -t <session name>:<window number>`  move pane to other session
+     * `ctrl + b + :new-session`  create a new session
 ---
 4. Ubuntu:
 
@@ -144,5 +148,6 @@
     ```
 
     *  `pip freeze > requirements.txt ` list the venv packages to requirements.txt file 
+    *  `use custom ssh key with .ssh/config file. Host github.com, HostName github.com, IdentityFile ssh_key, IdentitiesOnly yes `  Use another key to clone , push, etc
 
 
