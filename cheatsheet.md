@@ -106,7 +106,7 @@
      * `ls -laR` show files even in subfolders
      * `in ranger type: zh ` show hidden files
 ---
-3. Tux:
+3. Tmux:
 
      * `ctrl + b + c` create a new tab
      * `ctrl + b + number ` select the tab
@@ -118,6 +118,7 @@
      * `ctrl + b + space ` toggle tiling 
      * `ctrl + b + :move-pane -t <session name>:<window number>`  move pane to other session
      * `ctrl + b + :new-session`  create a new session
+     * `ctrl + b + $ ` rename the session
 ---
 4. Ubuntu:
 
