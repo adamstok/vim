@@ -151,5 +151,6 @@
 
     *  `pip freeze > requirements.txt ` list the venv packages to requirements.txt file 
     *  `use custom ssh key with .ssh/config file. Host github.com, HostName github.com, IdentityFile ssh_key, IdentitiesOnly yes `  Use another key to clone , push, etc
+    *  `ssh-add key `  when Permission denied (publickey)
 
 
