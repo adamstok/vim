@@ -118,6 +118,7 @@
      * `ctrl + b + space ` toggle tiling 
      * `ctrl + b + :move-pane -t <session name>:<window number>`  move pane to other session
      * `ctrl + b + :new-session`  create a new session
+     * `ctrl + b + : + -s + <name>` create a new session with some name
      * `ctrl + b + $ ` rename the session
 ---
 4. Ubuntu:
