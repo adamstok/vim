@@ -99,6 +99,7 @@
      * `. or @: ` repeat the last command in normal mode ( . ) / visual mode ( @: )
      * `:mksession! <file_name.vim>`  save the session
      * `:source <session_file.vim> `load the session (all the previously opened files)
+     * `leader mv / leader mv ` move windows -> see the init.vim file
 
 ---
 2. Terminal:
