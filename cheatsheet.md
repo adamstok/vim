@@ -97,6 +97,8 @@
      * `@ + letter / number of the macro` use the macro, ex: @v
      * `:'<,>'norm! @ + letter / number ` run the macro on the selected (in visual mode) lines, ex: :'<,>'norm! @v
      * `. or @: ` repeat the last command in normal mode ( . ) / visual mode ( @: )
+     * `:mksession! <file_name.vim>`  save the session
+     * `:source <session_file.vim> `load the session (all the previously opened files)
 
 ---
 2. Terminal:
