@@ -100,6 +100,7 @@
      * `:mksession! <file_name.vim>`  save the session
      * `:source <session_file.vim> `load the session (all the previously opened files)
      * `leader mv / leader mv ` move windows -> see the init.vim file
+     * `in insert mode: ctrl + n or ctrl + P ` vim autocomplete
 
 ---
 2. Terminal:
