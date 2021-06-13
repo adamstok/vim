@@ -80,5 +80,10 @@ On a clean Linux distribution install:
     If there is a problem with the installation of markdown-preview, do:
     `:PlugUpdate! markdown-preview.nvim`
 
+    If there is a problem with jedi try to install in your terminal:
+    `pip install jedi ` 
+    `python3 pip install --upgrade pyvim `
+
+
     [Setup fzf and ripgrep](https://dev.to/iggredible/how-to-search-faster-in-vim-with-fzf-vim-36ko)
 
