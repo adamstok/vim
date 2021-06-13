@@ -58,7 +58,12 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'mattn/emmet-vim'
 Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'mhinz/vim-grepper'
+Plug 'honza/vim-snippets'
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -216,43 +221,14 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <silent><expr> <C-space> coc#refresh()
 
 "GoTo code navigation
-nmap <leader>g <C-o>
 nmap <silent> gd :<C-u>call CocAction('jumpDefinition','vsplit')<cr>
-" nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gt <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
-nmap <leader>rr <Plug>(coc-rename)
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 "show all diagnostics.
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 "manage extensions.
 nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
-
-
-" let g:coc_user_config = {}
-" let g:coc_user_config['coc.preferences.jumpCommand'] = ':SplitIfNotOpen4COC'
-
-
-function! WinMove(key)
-    let t:curwin = winnr()
-    exec "wincmd ".a:key
-    if (t:curwin == winnr())
-        if (match(a:key,'[jk]'))
-            wincmd v
-        else
-            wincmd s
-        endif
-        exec "wincmd ".a:key
-    endif
-endfunction
-
-nnoremap <silent> <C-h> :call WinMove('h')<CR>
-nnoremap <silent> <C-j> :call WinMove('j')<CR>
-nnoremap <silent> <C-k> :call WinMove('k')<CR>
-nnoremap <silent> <C-l> :call WinMove('l')<CR>
 
 "-----------------------
 "Markdown Config
@@ -447,7 +423,7 @@ nnoremap <silent> <C-f> :vs<CR>:Files<CR>
 nnoremap <silent> <Leader>f :vs<CR>:Rg<CR>
 nnoremap <silent> <Leader>/ :vs<CR>:BLines<CR>
 nnoremap <silent> <Leader>' :vs<CR>:Marks<CR>
-nnoremap <silent> <Leader>g :vs<CR>:Commits<CR>
+nnoremap <silent> <Leader>c :vs<CR>:Commits<CR>
 nnoremap <silent> <Leader>H :vs<CR>:Helptags<CR>
 nnoremap <silent> <Leader>hh :vs<CR>:History<CR>
 nnoremap <silent> <Leader>h: :vs<CR>:History:<CR>
