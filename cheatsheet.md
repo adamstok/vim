@@ -98,7 +98,7 @@
      * `:'<,>'norm! @ + letter / number ` run the macro on the selected (in visual mode) lines, ex: :'<,>'norm! @v
      * `. or @: ` repeat the last command in normal mode ( . ) / visual mode ( @: )
      * `:mksession! <file_name.vim>`  save the session
-     * `:source <session_file.vim> `load the session (all the previously opened files)
+     * `:source <session_file.vim> or in the terminal: vim -S session_file.vim  `load the session (all the previously opened files)
      * `leader mv / leader mv ` move windows -> see the init.vim file
      * `in insert mode: ctrl + n or ctrl + P ` vim autocomplete
 
