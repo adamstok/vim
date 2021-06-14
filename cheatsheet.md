@@ -158,3 +158,7 @@
     *  `ssh-add key `  when Permission denied (publickey)
 
 
+---
+6. Windows:
+
+     * `alt + enter ` windows terminal enters full screen
