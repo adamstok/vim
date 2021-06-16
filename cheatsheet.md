@@ -101,6 +101,7 @@
      * `:source <session_file.vim> or in the terminal: vim -S session_file.vim  `load the session (all the previously opened files)
      * `leader mv / leader mv ` move windows -> see the init.vim file
      * `in insert mode: ctrl + n or ctrl + P ` vim autocomplete
+     * `:qa ` quit all open files - close all windows and exit
 
 ---
 2. Terminal:
