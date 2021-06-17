@@ -12,3 +12,4 @@ swap=0
 ```
 
   * Reboot the pc if needed :)
+  * If it doesn't work - stop Windows Docker
