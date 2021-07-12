@@ -1,0 +1,71 @@
+Config { font = "xft:Ubuntu:size=9:bold:antialias=true"
+       , additionalFonts = ["xft:Mononoki Nerd Font:size=9:antialias=true"]
+       
+       , bgColor = "black"
+       , fgColor = "#ABABAB"
+       , position = Top
+       , border = BottomB
+			 , borderColor = "#646464"
+       , iconRoot = "/home/user/.xmonad/xpm"
+
+			 , sepChar = "%"
+			 , alignSep = "}{"
+
+			 , template = "<icon=haskell_20.xpm/> %StdinReader% %date% }{ <icon=cpu_20.xpm/> %multicpu% --- <icon=memory-icon_20.xpm/> %memory% --- %dynnetwork% --- %battery% "
+       
+			 , lowerOnStart = False
+       , pickBroadest = False
+       , persistent = True
+       , hideOnStart = False
+       , allDesktops = True
+       , overrideRedirect = True
+
+			 , commands = 
+       [ Run DynNetwork [ "--template" , "<dev>: <tx> <icon=net_up_20.xpm/> / <rx> <icon=net_down_20.xpm/>"
+                        , "--Low"      , "1000"   -- units: B/s
+                        , "--High"     , "5000"   -- units: B/s
+                        , "--low"      , "darkgreen"
+                        , "--normal"   , "darkorange"
+                        , "--high"     , "darkred"
+                        ] 10
+        , Run StdinReader
+        , Run MultiCpu  [ "--template" , "<total0>% / <total1>%"
+                        , "--Low"      , "50"     -- units: %
+                        , "--High"     , "85"     -- units: %
+                        , "--low"      , "darkgreen"
+                        , "--normal"   , "darkorange"
+                        , "--high"     , "darkred"
+                        ] 10
+        , Run CoreTemp  [ "--template" , "Temp: <core0> C / <core1> C"
+                        , "--Low"      , "70"     -- units: C
+                        , "--High"     , "80"     -- units: C
+                        , "--low"      , "darkgreen"
+                        , "--normal"   , "darkorange"
+                        , "--high"     , "darkred"
+                         ] 50
+        , Run Memory    [ "--template" , "Mem: <usedratio>%"
+                        , "--Low"      , "20"     -- units: %
+                        , "--High"     , "90"     -- units: %
+                        , "--low"      , "darkgreen"
+                        , "--normal"   , "darkorange"
+                        , "--high"     , "darkred"
+                         ] 10
+        , Run Battery   [ "--template" , "<fn=1>\xf1e6</fn>  <acstatus>"
+                        , "--Low"      , "10"     -- units: %
+                        , "--High"     , "80"     -- units: %
+                        , "--low"      , "darkgreen"
+                        , "--normal"   , "darkorange"
+                        , "--high"     , "darkred"
+
+                        , "--" -- battery specific options
+                                  -- discharging status
+                                  , "-o" , "<left>% (<timeleft>)"
+                                  , "-O" , "<fc=#dAA520>Charging</fc>"
+                                  , "-i" , "<fc=#006000>Charged</fc>"
+                         ] 50
+        , Run Date      "<fc=#ABABAB>%F (%a) %T</fc>" "date" 10
+        , Run Kbd       [ ("us(dvorak)" , "<fc=#00008B>DV</fc>")
+                        , ("us"         , "<fc=#8B0000>US</fc>")
+                        ]
+       ]
+       }
