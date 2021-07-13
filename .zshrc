@@ -108,3 +108,4 @@ source /home/username/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-synt
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+bindkey -s '^f' 'vim $(fzf)\n'
