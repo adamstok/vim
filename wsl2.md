@@ -13,3 +13,4 @@ swap=0
 
   * Reboot the pc if needed :)
   * If it doesn't work - stop Windows Docker or connect to your container terminal, add your github / gitlab ssh key and push from the container
+  * If it doesn't work - just virtualise Linux in some kind of VMware or else :D

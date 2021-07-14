@@ -30,5 +30,10 @@
       * Remote - SSH
       * Remote - WSL
       * Trailing Spaces
-      * (Vim) -> to see
 
+3. Maybe the best one:
+
+      Install VMware
+
+      * [Configure the terminal / vim](https://github.com/adamstok/vim/)
+      * [Configure xmonad](https://github.com/adamstok/vim/tree/master/xmobar-xmonad)
