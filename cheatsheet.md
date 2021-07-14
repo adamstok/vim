@@ -144,6 +144,7 @@
      * `ctrl + alt + arrow up/down ` go to the another workspace
      * `ctrl + alt + shift + arrow ` move the current window to another workspace
      * `nautilus path ` open folder location
+     * `ctrl + f ` open fzf and then edit the selection in vim
 ---
 5. Git:
 
@@ -169,3 +170,13 @@
 6. Windows:
 
      * `alt + enter ` windows terminal enters full screen
+
+
+---
+7. Xmonad:
+
+    * mod key is the windows key
+    * `mod + shift + enter`  open terminal 
+    * `mod + <number> `move to another workspace
+    * `mod + space`  change tailing 
+    * `mod + shift + <number>` move the app to another workspace
