@@ -9,7 +9,6 @@ On a clean Linux distribution install:
   * [Zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
   * [git-flow-completion](https://github.com/bobthecow/git-flow-completion)
   * [zsh-completion](https://github.com/zsh-users/zsh-completions)
-  * [k](https://github.com/supercrabtree/k)
   * [zsh-syntax-hightighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
   * [ZSH-z](https://github.com/agkozak/zsh-z)
   * [fzf](https://github.com/junegunn/fzf#installation)

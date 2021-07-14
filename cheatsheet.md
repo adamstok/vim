@@ -103,6 +103,10 @@
      * `in insert mode: ctrl + n or ctrl + P ` vim autocomplete
      * `:qa ` quit all open files - close all windows and exit
      * `ctrl + w + <number> + w ` go to the window number
+     * `:lope :copen ` open errors 
+     * `:reg ` see the registers
+     * `"<register>yy ` yank to specific register
+     * `"<register>p ` paste from specific register
 
 ---
 2. Terminal:
