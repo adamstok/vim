@@ -180,3 +180,4 @@
     * `mod + <number> `move to another workspace
     * `mod + space`  change tailing 
     * `mod + shift + <number>` move the app to another workspace
+    * `mod + w, mod + e ` switch btw multiple monitors
