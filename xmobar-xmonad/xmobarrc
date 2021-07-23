@@ -6,7 +6,7 @@ Config { font = "xft:Ubuntu:size=9:bold:antialias=true"
        , position = Top
        , border = BottomB
 			 , borderColor = "#646464"
-       , iconRoot = "/home/user/.xmonad/xpm"
+       , iconRoot = "$HOME/.xmonad/xpm"
 
 			 , sepChar = "%"
 			 , alignSep = "}{"
