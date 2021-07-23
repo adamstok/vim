@@ -75,3 +75,5 @@ cp -r $HOME/Documents/vim/xmobar-xmonad/xpm $HOME/.xmonad/xpm
 cp $HOME/Documents/vim/xmobar-xmonad/xmonad.hs $HOME/.xmonad/xmonad.hs
 cp $HOME/Documents/vim/xmobar-xmonad/xmobarrc $HOME/.config/xmobar/xmobarrc
 cp $HOME/Documents/vim/wallpaper.jpg $HOME/Pictures/background.jpg
+dconf load /org/gnome/terminal/legacy/profiles:/ < $HOME/Documents/vim/gnome-terminal-profiles.dconf
+nitrogen $HOME/Pictures/background.jpg
