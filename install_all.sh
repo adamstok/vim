@@ -73,3 +73,4 @@ mkdir -p $HOME/.config/xmobar
 cp -r $HOME/Documents/vim/xmobar-xmonad/xpm $HOME/.xmonad/xpm
 cp $HOME/Documents/vim/xmobar-xmonad/xmonad.hs $HOME/.xmonad/xmonad.hs
 cp $HOME/Documents/vim/xmobar-xmonad/xmobarrc $HOME/.config/xmobar/xmobarrc
+cp $HOME/Documents/vim/wallpaper.jpg $HOME/Pictures/background.jpg
