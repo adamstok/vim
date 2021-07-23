@@ -68,7 +68,7 @@ cp $HOME/Documents/vim/.tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
 
 ### INSTALL XMONAD AND XMOBAR
-sudo apt install xmonad libghc-xmonad-contrib-dev xterm dmenu nitrogen compton
+sudo apt install xmonad libghc-xmonad-contrib-dev xterm dmenu nitrogen compton xmobar
 mkdir $HOME/.xmonad
 mkdir -p $HOME/.config/xmobar
 cp -r $HOME/Documents/vim/xmobar-xmonad/xpm $HOME/.xmonad/xpm
