@@ -8,7 +8,7 @@ fi
 ZSH_THEME="alanpeabody"
 eval `dircolors $HOME/.dir_colors/dircolors`
 
-plugins=(git tmux tmuxinator vi-mode vim-interaction python pip jsontools zsh-autosuggestions git-flow-completion zsh-completions )
+plugins=(git tmux tmuxinator vi-mode vim-interaction python pip jsontools zsh-autosuggestions git-flow-completion zsh-completions z)
 autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 
