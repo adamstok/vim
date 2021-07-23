@@ -254,7 +254,7 @@ myStartupHook = do
 --
 main = do
     xmproc <- spawnPipe "setxkbmap -layout pl -variant dvorak"
-    xmproc <- spawnPipe "xmobar -x 0 /home/users/.config/xmobar/xmobarrc"
+    xmproc <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc"
     xmonad $ docks defaultConfig
         { logHook = dynamicLogWithPP xmobarPP
             { ppOutput = \x -> hPutStrLn xmproc x
