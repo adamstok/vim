@@ -3,6 +3,7 @@ setxkbmap dvorak
 
 # Install dependencies and apps
 sudo apt install git
+sudo apt install ctags
 sudo apt install neovim
 sudo apt install zsh
 sudo apt install tmux
