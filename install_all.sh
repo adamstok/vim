@@ -65,6 +65,7 @@ vim -c ":CocInstall coc-tsserver"
 vim -c ":CocInstall coc-json"
 vim -c ":CocInstall coc-snippets"
 vim -c ":PlugUpdate! markdown-preview.nvim"
+vim -c ":call mkdp#util#install()"
 cp $HOME/Documents/vim/.tmux.conf $HOME/.tmux.conf
 tmux source-file $HOME/.tmux.conf
 

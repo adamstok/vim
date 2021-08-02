@@ -77,7 +77,7 @@ On a clean Linux distribution install:
 
 
     If there is a problem with the installation of markdown-preview, do:
-    `:PlugUpdate! markdown-preview.nvim`
+    `:PlugUpdate! markdown-preview.nvim` or `:call mkdp#util#install() `
 
     If there is a problem with jedi try to install in your terminal:
     `pip install jedi ` 
