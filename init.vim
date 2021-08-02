@@ -15,6 +15,7 @@ let python_highlight_all = 1
 " Specify a directory for plugins.
 call plug#begin('~/.vim/plugged')
 
+Plug 'vuciv/vim-bujo'
 Plug 'ap/vim-css-color' 
 " Atom One Dark / Light theme.
 Plug 'rakr/vim-one'
@@ -470,3 +471,13 @@ endfunction
 
 nmap <silent> <leader>mv :call MarkWindowSwap()<CR>
 nmap <silent> <leader>mm :call DoWindowSwap()<CR>
+" .............................................................................
+" Vim Bujo remaps
+" " .............................................................................
+nmap <C-S> <Plug>BujoAddnormal
+imap <C-S> <Plug>BujoAddinsert
+
+nmap <C-Q> <Plug>BujoChecknormal
+imap <C-Q> <Plug>BujoCheckinsert
+
+nnoremap <silent> <Leader>t :Todo<CR>

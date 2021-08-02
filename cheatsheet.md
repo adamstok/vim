@@ -107,6 +107,7 @@
      * `:reg ` see the registers
      * `"<register>yy ` yank to specific register
      * `"<register>p ` paste from specific register
+     * `leader + t or :Todo ` open Todo list -> if it is opened in a git repo, it will by default open the local Todo list, for the global Todo list do: :Todo g
 
 ---
 2. Terminal:
