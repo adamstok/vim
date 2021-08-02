@@ -67,6 +67,7 @@ vim -c ":CocInstall coc-snippets"
 vim -c ":PlugUpdate! markdown-preview.nvim"
 vim -c ":call mkdp#util#install()"
 cp $HOME/Documents/vim/.tmux.conf $HOME/.tmux.conf
+cp $HOME/Documents/vim/lsgrep $HOME/Documents/lsgrep
 tmux source-file $HOME/.tmux.conf
 
 ### INSTALL XMONAD AND XMOBAR
