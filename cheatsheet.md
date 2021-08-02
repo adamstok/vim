@@ -108,6 +108,8 @@
      * `"<register>yy ` yank to specific register
      * `"<register>p ` paste from specific register
      * `leader + t or :Todo ` open Todo list -> if it is opened in a git repo, it will by default open the local Todo list, for the global Todo list do: :Todo g
+     * `ctrl + s ` add new todo element when Todo list is opened
+     * `ctrl + q  `check todo element on Todo list
 
 ---
 2. Terminal:
