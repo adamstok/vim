@@ -133,6 +133,7 @@
      * `ctrl + b + :new-session`  create a new session
      * `ctrl + b + : + -s + <name>` create a new session with some name
      * `ctrl + b + $ ` rename the session
+     * `gx on http link ` open http link in firefox
 ---
 4. Ubuntu:
 

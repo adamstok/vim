@@ -481,3 +481,7 @@ nmap <C-Q> <Plug>BujoChecknormal
 imap <C-Q> <Plug>BujoCheckinsert
 
 nnoremap <silent> <Leader>t :Todo<CR>
+" .............................................................................
+" Open url in vim
+" " .............................................................................
+nmap gx :silent execute "!firefox " . shellescape("<cWORD>") . " &"<CR>
