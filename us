@@ -1,3 +1,5 @@
+// Copy to:  /usr/share/X11/xkb/symbols
+
 default  partial alphanumeric_keys modifier_keys
 xkb_symbols "basic" {
 
