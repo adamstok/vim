@@ -253,7 +253,7 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-    xmproc <- spawnPipe "setxkbmap -layout pl -variant dvorak"
+    xmproc <- spawnPipe "setxkbmap -layout us -variant dvorak"
     xmproc <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc"
     xmonad $ docks defaultConfig
         { logHook = dynamicLogWithPP xmobarPP
