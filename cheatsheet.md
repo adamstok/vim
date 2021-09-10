@@ -110,6 +110,7 @@
      * `leader + t or :Todo ` open Todo list -> if it is opened in a git repo, it will by default open the local Todo list, for the global Todo list do: :Todo g
      * `ctrl + s ` add new todo element when Todo list is opened
      * `ctrl + q  `check todo element on Todo list
+     * ` ]] or [[ ` go te the end of the function / next - prev function in the code
 
 ---
 2. Terminal:
