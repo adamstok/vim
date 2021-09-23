@@ -32,8 +32,14 @@
       * Trailing Spaces
 
 3. Maybe the best one:
+      
+      If you struggle with hyper-v, vmware, etc and want to go with vmware but the error occur try as admin in cmd:
 
-      Install Linux in a VM
+      `bcedit /set hypervisorlaunchtype off ` 
+
+      and reboot ;) - vmware should work hopefully
+
+      Install Linux in a VM, then:
 
       * [Configure the terminal / vim](https://github.com/adamstok/vim/)
       * [Configure xmonad](https://github.com/adamstok/vim/tree/master/xmobar-xmonad)
