@@ -111,6 +111,7 @@
      * `ctrl + s ` add new todo element when Todo list is opened
      * `ctrl + q  `check todo element on Todo list
      * ` ]] or [[ ` go te the end of the function / next - prev function in the code
+     * `ctrl + v then shift + i ` make change in visual block, stop changes with esc
 
 ---
 2. Terminal:
