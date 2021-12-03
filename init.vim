@@ -1,4 +1,5 @@
 set nocompatible
+
 " Syntax highlight
 " Default highlight is better than polyglot
 let g:polyglot_disabled = ['python']
@@ -14,6 +15,17 @@ let python_highlight_all = 1
 
 " Specify a directory for plugins.
 call plug#begin('~/.vim/plugged')
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
+
+Plug 'neovim/nvim-lsp'
+Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'folke/trouble.nvim'
+" Plug 'neoclide/coc-lists'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 
 Plug 'vuciv/vim-bujo'
 Plug 'ap/vim-css-color' 
@@ -48,7 +60,7 @@ Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree'
 Plug 'vobornik/vim-mql4'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-scripts/grep.vim'
 Plug 'Raimondi/delimitMate'
@@ -65,8 +77,45 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'mhinz/vim-grepper'
 Plug 'honza/vim-snippets'
-call plug#end()
+Plug 'tpope/vim-sensible'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+" -----------------------------------------------------------------------------
+"  PHP
+" -----------------------------------------------------------------------------
+Plug 'StanAngeloff/php.vim'
+" assuming you're using vim-plug: https://github.com/junegunn/vim-plug
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
 
+
+" NOTE: you need to install completion sources to get completions. Check
+" our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'neomake/neomake'
+
+
+call plug#end()
+" -----------------------------------------------------------------------------
+"  PHP
+" -----------------------------------------------------------------------------
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
+" When writing a buffer (no delay).
+call neomake#configure#automake('w')
+" When writing a buffer (no delay), and on normal mode changes (after 750ms).
+call neomake#configure#automake('nw', 750)
+" When reading a buffer (after 1s), and when writing (no delay).
+call neomake#configure#automake('rw', 1000)
+" Full config: when writing or reading a buffer, and on changes in insert and
+" normal mode (after 500ms; no delay when writing).
+call neomake#configure#automake('nrwi', 500)
 " -----------------------------------------------------------------------------
 " Color settings
 " -----------------------------------------------------------------------------
@@ -221,15 +270,15 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 inoremap <silent><expr> <C-space> coc#refresh()
 
-"GoTo code navigation
-nmap <silent> gd :<C-u>call CocAction('jumpDefinition','vsplit')<cr>
-nmap <silent> gr <Plug>(coc-references)
-nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+""GoTo code navigation
+"nmap <silent> gd :<C-u>call CocAction('jumpDefinition','vsplit')<cr>
+"nmap <silent> gr <Plug>(coc-references)
+" nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
-"show all diagnostics.
-nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
-"manage extensions.
-nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
+""show all diagnostics.
+"nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
+""manage extensions.
+"nnoremap <silent> <space>e :<C-u>CocList extensions<cr>
 
 "-----------------------
 "Markdown Config
@@ -471,17 +520,277 @@ endfunction
 
 nmap <silent> <leader>mv :call MarkWindowSwap()<CR>
 nmap <silent> <leader>mm :call DoWindowSwap()<CR>
+"
 " .............................................................................
 " Vim Bujo remaps
 " " .............................................................................
 nmap <C-S> <Plug>BujoAddnormal
 imap <C-S> <Plug>BujoAddinsert
 
-nmap <C-Q> <Plug>BujoChecknormal
-imap <C-Q> <Plug>BujoCheckinsert
+nmap <C-D> <Plug>BujoChecknormal
+imap <C-D> <Plug>BujoCheckinsert
 
 nnoremap <silent> <Leader>t :Todo<CR>
+
 " .............................................................................
 " Open url in vim
 " " .............................................................................
 nmap gx :silent execute "!firefox " . shellescape("<cWORD>") . " &"<CR>
+
+
+" .............................................................................
+" Vim Telescope
+" " .............................................................................
+" Find files using Telescope command-line sugar.
+" nnoremap <leader>tf <cmd>Telescope find_files<cr>
+" nnoremap <leader>tg <cmd>Telescope live_grep<cr>
+" nnoremap <leader>tb <cmd>Telescope buffers<cr>
+" nnoremap <leader>th <cmd>Telescope help_tags<cr>
+
+
+lua << EOF
+require'lspconfig'.pyright.setup{}
+EOF
+
+
+lua << EOF
+require'lspconfig'.intelephense.setup{}
+EOF
+
+" lua << EOF
+"   require("trouble").setup {
+"     -- your configuration comes here
+"     -- or leave it empty to use the default settings
+"     -- refer to the configuration section below
+"   }
+" EOF
+
+let g:the_primeagen_qf_l = 0
+let g:the_primeagen_qf_g = 0
+
+fun! ToggleQFList(global)
+    if a:global
+        if g:the_primeagen_qf_g == 1
+            let g:the_primeagen_qf_g = 0
+            cclose
+        else
+            let g:the_primeagen_qf_g = 1
+            copen
+        end
+    else
+        if g:the_primeagen_qf_l == 1
+            let g:the_primeagen_qf_l = 0
+            lclose
+        else
+            let g:the_primeagen_qf_l = 1
+            lopen
+        end
+    endif
+endfun
+
+
+fun! ToggleQFList(global)
+    if a:global
+        if g:the_primeagen_qf_g == 1
+            cclose
+        else
+            copen
+        end
+    else
+        echo 'toggle locallist'
+        if g:the_primeagen_qf_l == 1
+            lclose
+        else
+            lopen
+        end
+    endif
+endfun
+
+
+
+lua << EOF
+require'lspconfig'.pyright.setup{}
+require'lspconfig'.intelephense.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.bashls.setup{}
+require'lspconfig'.perlls.setup{}
+EOF
+
+"Quickfix lixt stuffff!!!!!!!
+nnoremap <C-q> :call ToggleQFList(1)<CR>
+nnoremap <C-k> :cprev<CR>zz
+nnoremap <C-j> :cnext<CR>zz
+
+""Cicle througth tabs
+"nnoremap <c-tab> :tabnext<CR>zz
+"nnoremap <leader>tt :tabnew<CR>zz
+"nnoremap <leader>tn :tabnext<CR>zz
+"nnoremap <leader>tp :tabprev<CR>zz
+"nnoremap <leader>tq :tabclose<CR>zz
+
+"Quickly open a notes file
+" nnoremap <leader>n :tab drop ~/notas.txt<CR>zz
+
+" close local fixlist window
+nnoremap <localleader>q :call ToggleQFList(0)<CR>zz
+nnoremap <localleader>n :lnext<CR>zz
+nnoremap <localleader>p :lprev<CR>zz
+
+" As a default I want to run case insensitive searches
+" nnoremap / /\c\v
+
+augroup rafaelleru
+    autocmd!
+    " Populate locallist with lsp diagnostics automatically 
+    autocmd User LspDiagnosticsChanged :lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+    " TODO: the nexts autocmd statements should not be necessary
+    autocmd BufWrite *.py :lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+    autocmd BufWrite *.php :lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+    autocmd BufWrite *.go :lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+    autocmd BufWrite *.rs :lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+    autocmd BufWrite *.cpp,*.hpp,*.h,*.c :lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+    autocmd BufWrite *.vim :lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+augroup END
+
+
+
+fun! SetQFControlVariable()
+    if getwininfo(win_getid())[0]['loclist'] == 1
+        let g:the_primeagen_qf_l = 1
+    else
+        let g:the_primeagen_qf_g = 1
+    end
+endfun
+
+fun! UnsetQFControlVariable()
+    if getwininfo(win_getid())[0]['loclist'] == 1
+        let g:the_primeagen_qf_l = 0
+    else
+        let g:the_primeagen_qf_g = 0
+    end
+endfun
+
+augroup locallist
+    autocmd!
+    " Populate locallist with lsp diagnostics automatically 
+    autocmd User LspDiagnosticsChanged :lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+augroup END
+
+
+augroup fixlist
+    autocmd!
+    autocmd BufWinEnter quickfix call SetQFControlVariable()
+    autocmd BufWinLeave * call UnsetQFControlVariable()
+augroup END
+
+
+
+
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)
+autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+
+
+lua << EOF
+vim.o.completeopt = "menuone,noselect"
+
+require'compe'.setup {
+  enabled = true;
+  autocomplete = true;
+  debug = false;
+  min_length = 1;
+  preselect = 'enable';
+  throttle_time = 80;
+  source_timeout = 200;
+  incomplete_delay = 400;
+  max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
+  documentation = false;
+
+  source = {
+    path = true;
+    buffer = true;
+    calc = true;
+    vsnip = true;
+    nvim_lsp = true;
+    nvim_lua = true;
+    spell = true;
+    tags = true;
+    snippets_nvim = true;
+    treesitter = true;
+  };
+}
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+    local col = vim.fn.col('.') - 1
+    if col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+        return true
+    else
+        return false
+    end
+end
+
+-- Use (s-)tab to:
+--- move to prev/next item in completion menuone
+--- jump to prev/next snippet's placeholder
+--_G.tab_complete = function()
+--  if vim.fn.pumvisible() == 1 then
+--    return t "<C-n>"
+--  elseif vim.fn.call("vsnip#available", {1}) == 1 then
+--    return t "<Plug>(vsnip-expand-or-jump)"
+--  elseif check_back_space() then
+--    return t "<Tab>"
+--  else
+--    return vim.fn['compe#complete']()
+--  end
+--end
+--_G.s_tab_complete = function()
+--  if vim.fn.pumvisible() == 1 then
+--    return t "<C-p>"
+--  elseif vim.fn.call("vsnip#jumpable", {-1}) == 1 then
+--    return t "<Plug>(vsnip-jump-prev)"
+--  else
+--    -- If <S-Tab> is not working in your terminal, change it to <C-h>
+--    return t "<S-Tab>"
+--  end
+--end
+
+--vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+--vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+--vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+--vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+EOF
+
+
+" Fzf
+
+let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
+
+function! s:build_quickfix_list(lines)
+  call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
+  copen
+  cc
+endfunction
+
+let g:fzf_action = {
+  \ 'ctrl-q': function('s:build_quickfix_list'),
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+lua << EOF
+require'nvim-treesitter.configs'.setup {highlight = {enable = true}}
+EOF
