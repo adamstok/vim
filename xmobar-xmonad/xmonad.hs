@@ -2,7 +2,10 @@ import XMonad
 import Data.Monoid
 import System.Exit
 import XMonad.Layout.Spacing
+import XMonad.Layout.ThreeColumns
+import XMonad.Layout.Spiral
 import XMonad.Layout.SimpleFloat
+import XMonad.Layout.Gaps
 
 import XMonad.Layout.Grid
 import XMonad.Config.Gnome
@@ -17,7 +20,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "gnome-terminal"
+myTerminal      = "x-terminal-emulator"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -181,10 +184,10 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts (tiled ||| Mirror tiled ||| Grid ||| Full ||| simpleFloat)
+myLayout = avoidStruts (ThreeCol 1 (3/100) (1/2) ||| spiral(6/7) ||| tiled ||| Grid ||| Mirror tiled ||| Full ||| simpleFloat)
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = smartSpacing 5 $ Tall nmaster delta ratio
+     tiled   = gaps [(U,23), (D,23), (L,23), (R,23)] $ Tall nmaster delta ratio -- or spacing
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -194,6 +197,7 @@ myLayout = avoidStruts (tiled ||| Mirror tiled ||| Grid ||| Full ||| simpleFloat
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
+
 
 ------------------------------------------------------------------------
 -- Window rules:
@@ -254,10 +258,11 @@ myStartupHook = do
 --
 main = do
     xmproc <- spawnPipe "setxkbmap -layout us -variant dvorak"
-    xmproc <- spawnPipe "xmobar -x 0 $HOME/.config/xmobar/xmobarrc"
+    xmproc <- spawnPipe "xmobar -x 0 /home/astokows/.config/xmobar/xmobarrc"
+    -- xmproc1 <- spawnPipe "xmobar -x 1 /home/astokows/.config/xmobar/xmobarrc"
     xmonad $ docks defaultConfig
         { logHook = dynamicLogWithPP xmobarPP
-            { ppOutput = \x -> hPutStrLn xmproc x
+            { ppOutput = \x -> hPutStrLn xmproc x -- >> hPutStrLn xmproc1 x
             , ppCurrent = xmobarColor "#c3e88d" "" . wrap "[" "]"
             , ppVisible = xmobarColor "#c3e88d" ""
             , ppHidden = xmobarColor "#82AAFF" "" . wrap "*" ""
@@ -270,9 +275,9 @@ main = do
         , modMask = myModMask
         , terminal = myTerminal
         , startupHook = myStartupHook
-        , layoutHook = myLayout
+        , layoutHook = spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10 ) True $ gaps [(U,23), (D,23), (L,23), (R,23)] $ myLayout
         , workspaces = myWorkspaces
-        , borderWidth = 3
+        , borderWidth = 5
         , normalBorderColor = "#292d3e"
         , focusedBorderColor = "#bbc5ff"
         , keys = myKeys
