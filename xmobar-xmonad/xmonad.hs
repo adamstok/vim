@@ -187,7 +187,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = avoidStruts (ThreeCol 1 (3/100) (1/2) ||| spiral(6/7) ||| tiled ||| Grid ||| Mirror tiled ||| Full ||| simpleFloat)
   where
      -- default tiling algorithm partitions the screen into two panes
-     tiled   = gaps [(U,23), (D,23), (L,23), (R,23)] $ Tall nmaster delta ratio -- or spacing
+     tiled   = Tall nmaster delta ratio -- or spacing
 
      -- The default number of windows in the master pane
      nmaster = 1
@@ -275,7 +275,7 @@ main = do
         , modMask = myModMask
         , terminal = myTerminal
         , startupHook = myStartupHook
-        , layoutHook = spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10 ) True $ gaps [(U,23), (D,23), (L,23), (R,23)] $ myLayout
+        , layoutHook = spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10 ) True $ gaps [(U,37), (D,23), (L,23), (R,23)] $ myLayout -- spacingRaw True (Border 25 10 10 10) True (Border 10 10 10 10 ) True $ 
         , workspaces = myWorkspaces
         , borderWidth = 5
         , normalBorderColor = "#292d3e"
