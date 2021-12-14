@@ -30,6 +30,18 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-
 git clone https://github.com/agkozak/zsh-z $HOME/.oh-my-zsh/custom/plugins/zsh-z
 source $HOME/.zshrc
 echo "CHANGE PATHS IN XMONAD.HS AND XMOBARRC TO /HOME/USERNAME"
+echo "change picom /etc/xdg/picom.conf  add -->"
+echo "opacity-rule = ["
+echo	"90:class_g = 'gnome-terminal' && focused",
+echo	"60:class_g = 'gnome-terminal' && !focused"
+echo "];"
+
+echo "change the end of /etc/X11/xinit/xinitrc -->> 
+xmonad &
+nitrogen --restore &
+picom &
+exec"
+
 
 cp $HOME/Documents/vim/xmobar-xmonad/backgrounds/arcolinux/** $HOME/Pictures/
 dconf load /org/gnome/terminal/legacy/profiles:/ < $HOME/Documents/vim/gnome-terminal-profiles.dconf
