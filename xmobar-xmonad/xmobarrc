@@ -1,7 +1,13 @@
 Config { font = "xft:Ubuntu:size=9:bold:antialias=true"
        , additionalFonts = ["xft:Mononoki Nerd Font:size=9:antialias=true"]
        
-       , bgColor = "black"
+       -- , bgColor = "black"
+       -- , bgColor = "#091434"
+       -- , bgColor = "#1F387D"
+			 -- , alpha = 0
+       -- , bgColor = "#53129B"
+       -- , bgColor = "#3F1850" --
+       , bgColor = "#5E1F37"
        , fgColor = "#ABABAB"
        , position = Top
        , border = BottomB

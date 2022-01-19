@@ -13,6 +13,7 @@ import XMonad.Util.SpawnOnce
 import XMonad.Util.Run
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.SetWMName
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -20,7 +21,7 @@ import qualified Data.Map        as M
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "x-terminal-emulator"
+myTerminal      = "xfce4-terminal"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -32,7 +33,7 @@ myClickJustFocuses = False
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 3
+myBorderWidth   = 5
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -66,7 +67,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_g     ), spawn "dmenu_run")
+    , ((modm,               xK_g     ), spawn "dmenu_run -nb '#53129B' -nf '#ABABAB'")
 
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -108,7 +109,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_h     ), sendMessage Shrink)
 
     -- Expand the master area
-    , ((modm,               xK_l     ), sendMessage Expand)
+    , ((modm,               xK_r     ), sendMessage Expand)
 
     -- Push window back into tiling
     , ((modm,               xK_t     ), withFocused $ windows . W.sink)
@@ -250,6 +251,8 @@ myLogHook = return ()
 myStartupHook = do
     spawnOnce "nitrogen --restore &"
     spawnOnce "compton &"
+    setWMName "LG3D"
+
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -258,8 +261,8 @@ myStartupHook = do
 --
 main = do
     xmproc <- spawnPipe "setxkbmap -layout us -variant dvorak"
-    xmproc <- spawnPipe "xmobar -x 0 /home/astokows/.config/xmobar/xmobarrc"
-    -- xmproc1 <- spawnPipe "xmobar -x 1 /home/astokows/.config/xmobar/xmobarrc"
+    xmproc <- spawnPipe "xmobar -x 0 /home/user/.config/xmobar/xmobarrc"
+    -- xmproc1 <- spawnPipe "xmobar -x 1 /home/user/.config/xmobar/xmobarrc"
     xmonad $ docks defaultConfig
         { logHook = dynamicLogWithPP xmobarPP
             { ppOutput = \x -> hPutStrLn xmproc x -- >> hPutStrLn xmproc1 x
@@ -278,7 +281,8 @@ main = do
         , layoutHook = spacingRaw False (Border 15 15 15 15) True (Border 15 15 15 15 ) True $ gaps [(U,55), (D,55), (L,40), (R,40)] $ myLayout -- spacingRaw True (Border 25 10 10 10) True (Border 10 10 10 10 ) True $ 
         , workspaces = myWorkspaces
         , borderWidth = 5
-        , normalBorderColor = "#292d3e"
+        -- , normalBorderColor = "#292d3e"
+        , normalBorderColor = "#53129B"
         , focusedBorderColor = "#bbc5ff"
         , keys = myKeys
         

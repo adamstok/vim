@@ -1,17 +1,17 @@
-sudo pacman -S xmobar git svn neovim base-devel nitrogen picom dmenu firefox gnome-terminal fzf ripgrep
+sudo pacman -S xmobar git svn neovim base-devel nitrogen picom dmenu firefox gnome-terminal fzf ripgrep zsh 
 cd $HOME/Documents/
 git clone https://github.com/adamstok/vim
-cd vim
+cd $HOME/vim
 sudo cp us /usr/share/X11/xkb/symbols/us
 sudo setxkbmap dvorak
-cd xmobar-xmonad
-cp xmonad.hs ~/.xmonad/xmonad.hs
+cd $HOME/Documents/vim/xmobar-xmonad
+cp xmonad.hs $HOME/.xmonad/xmonad.hs
 mkdir $HOME/.config/xmobar
 cp xmobarrc $HOME/.config/xmobar/
 cd $HOME/Documents
-sudo git https://aur.archlinux.org/yay-git.git
-chmod 777 -R yay-git
-cd yay-git
+sudo git clone https://aur.archlinux.org/yay-git.git
+sudo chmod 777 -R $HOME/Documents/yay-git
+cd $HOME/Documents/yay-git
 makepkg -si
 cd $HOME/Documents/vim/xmobar-xmonad
 cp -r xpm $HOME/.xmonad/
@@ -28,6 +28,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/cust
 git clone https://github.com/zsh-users/zsh-completions $HOME/.oh-my-zsh/custom/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 git clone https://github.com/agkozak/zsh-z $HOME/.oh-my-zsh/custom/plugins/zsh-z
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 source $HOME/.zshrc
 echo "CHANGE PATHS IN XMONAD.HS AND XMOBARRC TO /HOME/USERNAME"
 echo "change picom /etc/xdg/picom.conf  add -->"
